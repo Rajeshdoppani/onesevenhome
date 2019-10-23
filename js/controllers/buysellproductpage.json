@@ -1,0 +1,380 @@
+{
+	"buysellproductpage" : [
+	{
+		"id":1,
+		"title": " BED",
+		"price": 0,
+		"imgurl1": "img/FurnitureDecor/Bed/bed1.jpg",
+	     "timgurl1": "img/FurnitureDecor/Bed/bed1.jpg",
+		"timgurl2": "img/FurnitureDecor/Bed/bed2.jpg",
+		"timgurl3": "img/FurnitureDecor/Bed/bed3.jpg",
+		"timgurl4": "img/FurnitureDecor/Bed/bed4.jpg"
+	
+	},
+	{
+		"id":2,
+		"title": "DiningTable",
+		"price": 0,
+		"imgurl1": "img/FurnitureDecor/Dining/diningtbl1.jpg",
+	"timgurl1": "img/FurnitureDecor/Dining/diningtbl1.jpg",
+		"timgurl2": "img/FurnitureDecor/Dining/diningtbl2.jpg",
+		"timgurl3": "img/FurnitureDecor/Dining/diningtbl3.jpg",
+		"timgurl4": "img/FurnitureDecor/Dining/diningtbl4.jpg"
+	},
+	{
+		"id":3,
+		"title": "Dressing Table",
+		"price": 0,
+		"imgurl1": "img/FurnitureDecor/Dressing/Dresingtble1.jpg",
+	"timgurl1": "img/FurnitureDecor/Dressing/Dresingtble1.jpg",
+		"timgurl2": "img/FurnitureDecor/Dressing/Dresingtble2.jpg",
+		"timgurl3": "img/FurnitureDecor/Dressing/Dresingtble3.jpg",
+		"timgurl4": "img/FurnitureDecor/Dressing/Dresingtble4.jpg"
+	},
+	{
+		"id":4,
+		"title": "Table-clock",
+		"price": 0,
+		"imgurl1": "img/FurnitureDecor/Table-clock/table-clock1.jpg",
+	"timgurl1": "img/FurnitureDecor/Table-clock/table-clock1.jpg",
+		"timgurl2": "img/FurnitureDecor/Table-clock/table-clock2.jpg",
+		"timgurl3": "img/FurnitureDecor/Table-clock/table-clock3.jpg",
+		"timgurl4": "img/FurnitureDecor/Table-clock/table-clock4.jpg"
+	},
+	{
+		"id":5,
+		"title": "Recliners",
+		"price": 0,
+		"imgurl1": "img/FurnitureDecor/Recliners/Recliners1.jpg",
+	"timgurl1": "img/FurnitureDecor/Recliners/Recliners1.jpg",
+		"timgurl2": "img/FurnitureDecor/Recliners/Recliners2.jpg",
+		"timgurl3": "img/FurnitureDecor/Recliners/Recliners3.jpg",
+		"timgurl4": "img/FurnitureDecor/Recliners/Recliners4.jpg"
+	},
+	{
+		"id":6,
+		"title": "Sofa",
+		"price": 0,
+		"imgurl1": "img/FurnitureDecor/Sofa/Sofa1.jpg",
+	"timgurl1": "img/FurnitureDecor/Sofa/Sofa1.jpg",
+		"timgurl2": "img/FurnitureDecor/Sofa/Sofa2.jpg",
+		"timgurl3": "img/FurnitureDecor/Sofa/Sofa3.jpg",
+		"timgurl4": "img/FurnitureDecor/Sofa/Sofa4.jpg"
+	},
+	{
+	
+	     "id":7,
+		"title": " LG-Airconditions ",
+		"price": 0,
+       "imgurl1": "img/Electronics/LG-Airconditions/LG-Airconditions1.jpg",
+	   	"timgurl1": "img/Electronics/LG-Airconditions/LG-Airconditions1.jpg",
+		"timgurl2": "img/Electronics/LG-Airconditions/LG-Airconditions2.jpg",
+		"timgurl3": "img/Electronics/LG-Airconditions/LG-Airconditions3.jpg",
+		"timgurl4": "img/Electronics/LG-Airconditions/LG-Airconditions4.jpg"
+	    
+
+
+	},
+	{
+	     "id":8,
+		"title": " Symphony-coolr",
+		"price": 0,
+       "imgurl1": "/img/Electronics/Symphony-coolr/Symphony-coolr1.jpg",
+	   	"timgurl1": "img/Electronics/Symphony-coolr/Symphony-coolr1.jpg",
+		"timgurl2": "img/Electronics/Symphony-coolr/Symphony-coolr2.jpg",
+		"timgurl3": "img/Electronics/Symphony-coolr/Symphony-coolr3.jpg",
+		"timgurl4": "img/Electronics/Symphony-coolr/Symphony-coolr4.jpg"
+	    
+
+
+	},
+	
+	{
+	     "id":9,
+		"title": "Samsung-Fridge",
+		"price": 0,
+       "imgurl1": "img/Electronics/Samsung-Fridge/Samsung-Fridge1.jpg",
+	    "timgurl1": "img/Electronics/Samsung-Fridge/Samsung-Fridge1.jpg",
+		"timgurl2": "img/Electronics/Samsung-Fridge/Samsung-Fridge2.jpg",
+		"timgurl3": "img/Electronics/Samsung-Fridge/Samsung-Fridge3.jpg",
+		"timgurl4": "img/Electronics/Samsung-Fridge/Samsung-Fridge4.jpg"
+	    
+
+
+	},
+	{
+	     "id":10,
+		"title": "Samsung-TVs",
+		"price": 0,
+       "imgurl1": "/img/Electronics/Samsung-TVs/Samsung-TVs1.jpg",
+	  "timgurl1": "img/Electronics/Samsung-TVs/Samsung-TVs1.jpg",
+		"timgurl2": "img/Electronics/Samsung-TVs/Samsung-TVs2.jpg",
+		"timgurl3": "img/Electronics/Samsung-TVs/Samsung-TVs3.jpg",
+		"timgurl4": "img/Electronics/Samsung-TVs/Samsung-TVs4.jpg"
+	    
+
+
+	},
+	{
+	     "id":11,
+		"title": "Samsung-washing",
+		"price": 0,
+       "imgurl1": "img/Electronics/Samsung-washing/Samsung-washing1.jpg",
+	   	"timgurl1": "img/Electronics/Samsung-washing/Samsung-washing1.jpg",
+		"timgurl2": "img/Electronics/Samsung-washing/Samsung-washing2.jpg",
+		"timgurl3": "img/Electronics/Samsung-washing/Samsung-washing3.jpg",
+		"timgurl4": "img/Electronics/Samsung-washing/Samsung-washing4.jpg"
+
+
+	},
+	{
+	     "id":12,
+		"title": "  Bajaj-hter",
+		"price": 0,
+       "imgurl1": "img/Electronics/Bajaj-hter/Bajaj-hter1.jpg",
+	 "timgurl1": "img/Electronics/Bajaj-hter/Bajaj-hter1.jpg",
+		"timgurl2": "img/Electronics/Bajaj-hter/Bajaj-hter2.jpg",
+		"timgurl3": "img/Electronics/Bajaj-hter/Bajaj-hter3.jpg",
+		"timgurl4": "img/Electronics/Bajaj-hter/Bajaj-hter4.jpg"
+	    
+
+
+	},
+	
+	{
+
+	     "id":13,
+		"title": " Bajaj Vacco Bajaj Chapat- Roti-Khakhra Maker C-03 Wattage 900 Roti Makers",
+		"price": 0,
+       "imgurl1": "img/KitchenAppliences/BajajVacco/BajajVacco-1.jpg",
+	   	"timgurl1": "img/KitchenAppliences/BajajVacco/BajajVacco-1.jpg",
+		"timgurl2": "img/KitchenAppliences/BajajVacco/BajajVacco-2.jpg",
+		"timgurl3": "img/KitchenAppliences/BajajVacco/BajajVacco-3.jpg",
+		"timgurl4": "img/KitchenAppliences/BajajVacco/BajajVacco-4.jpg"
+		
+	    
+
+
+	},
+	{
+	     "id":14,
+		"title": "Butterfly Smart 750-Watt Mixer Grinder with 4 Jar (Grey)",
+		"price": 0,
+       "imgurl1": "/img/KitchenAppliences/Butterfly/Butterfly-1.jpg",
+	   	"timgurl1": "img/KitchenAppliences/Butterfly/Butterfly-1.jpg",
+		"timgurl2": "img/KitchenAppliences/Butterfly/Butterfly-2.jpg",
+		"timgurl3": "img/KitchenAppliences/Butterfly/Butterfly-3.jpg",
+		"timgurl4": "img/KitchenAppliences/Butterfly/Butterfly-4.jpg"
+	    
+
+
+	},
+	
+	{
+	     "id":15,
+		"title": "Elgi-Ultra",
+		"price": 0,
+         "imgurl1":"/img/KitchenAppliences/Elgi-Ultra/Elgi-Ultra-1.jpg",
+	  	"timgurl1": "img/KitchenAppliences/Elgi-Ultra/Elgi-Ultra-1.jpg",
+		"timgurl2": "img/KitchenAppliences/Elgi-Ultra/Elgi-Ultra-2.jpg",
+		"timgurl3": "img/KitchenAppliences/Elgi-Ultra/Elgi-Ultra-3.jpg",
+		"timgurl4": "img/KitchenAppliences/Elgi-Ultra/Elgi-Ultra-4.jpg"
+	    
+
+
+	},
+	{
+	     "id":16,
+		"title": "Elica Kitchen Chimney 60 cm 1100 M3-H (ESCG BF 60 Nero, Black)",
+		"price": 0,
+       "imgurl1": "/img/KitchenAppliences/Elica-CHimney/Elica-CHimney-1.jpg",
+		"timgurl1": "img/KitchenAppliences/Elica-CHimney/Elica-CHimney-1.jpg",
+		"timgurl2": "img/KitchenAppliences/Elica-CHimney/Elica-CHimney-2.jpg",
+		"timgurl3": "img/KitchenAppliences/Elica-CHimney/Elica-CHimney-3.jpg",
+		"timgurl4": "img/KitchenAppliences/Elica-CHimney/Elica-CHimney-4.jpg"
+	    
+
+
+	},
+	{
+	     "id":17,
+		"title": "Panasonic SR-WA18 E 4.4-Litre Automatic Rice Cooker (White)",
+		"price": 0,
+       "imgurl1": "/img/KitchenAppliences/Panasonic/Panasonic-1.jpg",
+	 	"timgurl1": "img/KitchenAppliences/Panasonic/thumbnail-1.jpg",
+		"timgurl2": "img/KitchenAppliences/Panasonic /thumbnail-2.jpg",
+		"timgurl3": "img/KitchenAppliences/Panasonic /thumbnail-3.jpg",
+		"timgurl4": "img/KitchenAppliences/Panasonic /thumbnail-4.jpg"
+
+
+	},
+	{
+	     "id":18,
+		"title": " Prestige PIC 20 1200 Watt Induction Cooktop with Push button",
+		"price": 0,
+       "imgurl1": "/img/KitchenAppliences/Prestige/Prestige-1.jpg",
+	 	"timgurl1": "img/KitchenAppliences/Prestige/Prestige-1.jpg",
+		"timgurl2": "img/KitchenAppliences/Prestige/Prestige-2.jpg",
+		"timgurl3": "img/KitchenAppliences/Prestige/Prestige-3.jpg",
+		"timgurl4": "img/KitchenAppliences/Prestige/Prestige-4.jpg"
+	    
+
+
+	},
+	{
+
+	     "id":19,
+		"title": "Kidspool_1",
+		"price": 0,
+       "imgurl1": "/img/Home_Amenties/1_kidspool/kidspool-1.jpg",
+	   "timgurl1": "img/Home_Amenties/1_kidspool/kidspool-1.jpg",
+		"timgurl2": "img/Home_Amenties/1_kidspool/kidspool-2.jpg",
+		"timgurl3": "img/Home_Amenties/1_kidspool/kidspool-3.jpg",
+		"timgurl4": "img/Home_Amenties/1_kidspool/kidspool-4.jpg"
+	    
+
+
+	},
+	{
+	     "id":20,
+		"title": " Kidspool_2",
+		"price": 0,
+       "imgurl1": "/img/Home_Amenties/2_kidspool/intex-kidspoolred-1.jpg",
+	   "timgurl1": "img/Home_Amenties/2_kidspool/intex-kidspoolred-1.jpg",
+		"timgurl2": "img/Home_Amenties/2_kidspool/intex-kidspoolred-2.jpg",
+		"timgurl3": "img/Home_Amenties/2_kidspool/intex-kidspoolred-3.jpg",
+		"timgurl4": "img/Home_Amenties/2_kidspool/intex-kidspoolred-4.jpg"
+	    
+
+
+	},
+	
+	{
+	     "id":21,
+		"title": "Swimmingpool",
+		"price": 0,
+       "imgurl1": "/img/Home_Amenties/3_Swimmingpool/swimmingpool-1.jpg",
+	  "timgurl1": "img/Home_Amenties/3_Swimmingpool/swimmingpool-1.jpg",
+		"timgurl2": "img/Home_Amenties/3_Swimmingpool/swimmingpool-2.jpg",
+		"timgurl3": "img/Home_Amenties/3_Swimmingpool/swimmingpool-3.jpg",
+		"timgurl4": "img/Home_Amenties/3_Swimmingpool/swimmingpool-4.jpg"
+	    
+
+
+	},
+	{
+	     "id":22,
+		"title": "Meditation_Gazebos",
+		"price": 0,
+       "imgurl1": "/img/Home_Amenties/4_Meditation_Gazebos/Meditation-1.jpg",
+	 "timgurl1": "img/Home_Amenties/4_Meditation_Gazebos/Meditation-1.jpg",
+		"timgurl2": "img/Home_Amenties/4_Meditation_Gazebos/Meditation-2.jpg",
+		"timgurl3": "img/Home_Amenties/4_Meditation_Gazebos/Meditation-3.jpg",
+		"timgurl4": "img/Home_Amenties/4_Meditation_Gazebos/Meditation-4.jpg"
+	    
+
+
+	},
+	{
+	     "id":23,
+		"title": "Gym_Equipement",
+		"price": 0,
+       "imgurl1": "/img/Home_Amenties/5_Gym_Equipement/GymEquipement-1.jpg",
+	"timgurl1": "img/Home_Amenties/5_Gym_Equipement/GymEquipement-1.jpg",
+		"timgurl2": "img/Home_Amenties/5_Gym_Equipement/GymEquipement-2.jpg",
+		"timgurl3": "img/Home_Amenties/5_Gym_Equipement/GymEquipement-3.jpg",
+		"timgurl4": "img/Home_Amenties/5_Gym_Equipement/GymEquipement-4.jpg"
+
+
+	},
+	{
+	     "id":24,
+		"title": "Fitness_Bike",
+		"price": 0,
+       "imgurl1": "/img/Home_Amenties/6_Fitness_Bike/FitnessBike-1.jpg",
+	"timgurl1": "img/Home_Amenties/6_Fitness_Bike/FitnessBike-1.jpg",
+		"timgurl2": "img/Home_Amenties/6_Fitness_Bike/FitnessBike-2.jpg",
+		"timgurl3": "img/Home_Amenties/6_Fitness_Bike/FitnessBike-3.jpg",
+		"timgurl4": "img/Home_Amenties/6_Fitness_Bike/FitnessBike-4.jpg"
+	   
+	},
+	{
+	     "id":25,
+		"title": " Dream-Avenue ",
+		"price": 0,
+       "imgurl1": "img/RealEstate/Dream-Avenue/dream-avenue-1.jpg",
+	    "timgurl1": "img/RealEstate/Dream-Avenue/dream-avenue-1.jpg",
+		"timgurl2": "img/RealEstate/Dream-Avenue/dream-avenue-2.jpg",
+		"timgurl3": "img/RealEstate/Dream-Avenue/dream-avenue-3.jpg",
+		"timgurl4": "img/RealEstate/Dream-Avenue/dream-avenue-4.jpg"
+	    
+
+
+	},
+	{
+	     "id":26,
+		"title": " Keerthi-Richmond",
+		"price": 0,
+       "imgurl1": "img/RealEstate/KEERTHI-RICHMOND/KEERTHI-RICHMOND-1.jpg",
+	   "timgurl1": "img/RealEstate/KEERTHI-RICHMOND/KEERTHI-RICHMOND-1.jpg",
+		"timgurl2": "img/RealEstate/KEERTHI-RICHMOND/KEERTHI-RICHMOND-2.jpg",
+		"timgurl3": "img/RealEstate/KEERTHI-RICHMOND/KEERTHI-RICHMOND-3.jpg",
+		"timgurl4": "img/RealEstate/KEERTHI-RICHMOND/KEERTHI-RICHMOND-4.jpg"
+	    
+
+
+	},
+	
+	{
+	     "id":27,
+		"title": "Kenworth-1",
+		"price": 0,
+       "imgurl1": "img/RealEstate/Kenworth-1/Kenworth-1.jpg",
+	   "timgurl1": "img/RealEstate/Kenworth-1/Kenworth-1.jpg",
+		"timgurl2": "img/RealEstate/Kenworth-1/Kenworth-2.jpg",
+		"timgurl3": "img/RealEstate/Kenworth-1/Kenworth-3.jpg",
+		"timgurl4": "img/RealEstate/Kenworth-1/Kenworth-4.jpg"
+	    
+
+
+	},
+	{
+	     "id":28,
+		"title": "Silpa-Hilltop",
+		"price": 0,
+       "imgurl1": "/img/RealEstate/SILPA-HILLTOP/SILPA-HILLTOP1.jpg",
+	   "timgurl1": "img/RealEstate/SILPA-HILLTOP/SILPA-HILLTOP1.jpg",
+		"timgurl2": "img/RealEstate/SILPA-HILLTOP/SILPA-HILLTOP2.jpg",
+		"timgurl3": "img/RealEstate/SILPA-HILLTOP/SILPA-HILLTOP3.jpg",
+		"timgurl4": "img/RealEstate/SILPA-HILLTOP/SILPA-HILLTOP4.jpg"
+	    
+
+
+	},
+	{
+	     "id":29,
+		"title": "spandana",
+		"price": 0,
+       "imgurl1": "img/RealEstate/SPANDANA/SPANDANA-1.jpg",
+	   "timgurl1": "img/RealEstate/SPANDANA/SPANDANA-1.jpg",
+		"timgurl2": "img/RealEstate/SPANDANA/SPANDANA-2.jpg",
+		"timgurl3": "img/RealEstate/SPANDANA/SPANDANA-3.jpg",
+		"timgurl4": "img/RealEstate/SPANDANA/SPANDANA-4.jpg"
+
+
+	},
+	{
+	     "id":30,
+		"title": "SVS_Infra",
+		"price": 0,
+       "imgurl1": "img/RealEstate/SVS_Infra/SVSInfra-1.jpg",
+	   "timgurl1": "img/RealEstate/SVS_Infra/SVSInfra-1.jpg",
+		"timgurl2": "img/RealEstate/SVS_Infra/SVSInfra-2.jpg",
+		"timgurl3": "img/RealEstate/SVS_Infra/SVSInfra-3.jpg",
+		"timgurl4": "img/RealEstate/SVS_Infra/SVSInfra-4.jpg"
+	    
+
+
+	}
+	]
+}

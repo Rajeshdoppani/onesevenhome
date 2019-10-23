@@ -1,0 +1,48 @@
+<div class="wrap">
+  <section class="top" id="top-header">
+     <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 shipping-text"> Free Shipping on Orders <i class="fa fa-rupee"></i> 5000 and Above </div>
+            <div class="col-xs-12 col-sm-6 links">
+               <a href="#contact" class="right-links">Contact Us</a> <span ng-hide="userlogged"><a href="#/login" class="right-links">Login </a>  <a href="#/registration" > Signup</a></span><span class="login-btn" ng-show="userlogged">{{loggedInUserName}}</span>
+               <div class="myprofile-block">
+                  <div class="mypro-brdr">
+                     <div class="pro-top">
+                        <div class="pro-txt">
+                           <h3>{{loggedInUserName}}</h3>
+                           <h4>{{loggedInUser}}</h4>
+                        </div>
+                     </div>
+                     <div class="pro-btm">
+                        <span class="mypro-btn" ng-click="myProfile()"><a>My profile</a></span>
+                        <span class="mypro-logout" ng-click="logout()"><a>Log Out</a></span>
+                     </div>
+                  </div>
+               </div>
+               <a href="#cart" class="cart">
+                  <img src="img/cart1.png">
+                  <span class="cart-value"> {{lengthofcart}}</span> 
+               </a>
+            </div>
+         </div>
+      </div>
+	
+  </section>
+   <header class="header">
+     <header-Directive></header-Directive>
+      <category-Directive></category-Directive>
+   </header>
+   <div class="container">
+      <section class="todaydeals title" >
+         <div class="row">
+            <div class="col-xs-12">
+               <h2 class="sec-title"><strong>Coming Soon</strong></h2>
+               <h3 class="sub-tag">Great Savings. Every Day. Shop from our Deal of the Day, Lightning Deals and avail other great 
+                  offers. <span ng-show="showSignUp"><a href="#registration">Sign up</a> for deal notifications.</span>
+               </h3>
+            </div>
+         </div>
+      </section>
+	 </div>
+	 </div>
+	 

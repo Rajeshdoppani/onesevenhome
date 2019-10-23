@@ -1,0 +1,57 @@
+ [
+	{
+	     "id":1,
+		"title": "BED",
+		"price": 0,
+       "imgurl1": "img/FurnitureDecor/Bed/bed1.jpg"
+	    
+
+
+	},
+	{
+	     "id":2,
+		"title": "DiningTable",
+		"price": 0,
+       "imgurl1": "img/FurnitureDecor/Dining/diningtbl1.jpg"
+	    
+
+
+	},
+	
+	{
+	     "id":3,
+		"title": "Dressing Table",
+		"price": 0,
+       "imgurl1": "img/FurnitureDecor/Dressing/Dresingtble1.jpg"
+	    
+
+
+	},
+	{
+	     "id":4,
+		"title": "Table-clock",
+		"price": 0,
+       "imgurl1": "img/FurnitureDecor/Table-clock/table-clock1.jpg"
+	    
+
+
+	},
+	{
+	     "id":5,
+		"title": "Recliners",
+		"price": 0,
+       "imgurl1": "img/FurnitureDecor/Recliners/Recliners1.jpg"
+
+
+	},
+	{
+	     "id":6,
+		"title": "Sofa",
+		"price": 0,
+       "imgurl1": "img/FurnitureDecor/Sofa/Sofa1.jpg"
+	    
+
+
+	}
+	
+	]

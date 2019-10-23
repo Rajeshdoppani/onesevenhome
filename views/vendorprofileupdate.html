@@ -1,0 +1,278 @@
+  <section class="login mid acc-profile">
+                     <div class="home-top">
+                        <h5>Edit Profile</h5>
+                     </div>
+                     <div class="login-mid-block">
+                        <form class="form-horizontal" name="vendorForm">
+                           <div class="edit-pro">
+                              <figure>
+                                 <a>
+                                    <img src="{{vendorprofile.userProfile}}" />
+                                 </a>
+                              </figure>
+                              <div class="form-group">
+                                 <input type="file" name="file" id="profilePic" class="inputfile inputfile-2 vendorpic"
+                                    accept=".jpg, .jpeg, .png">
+                                 <label for="profilePic"> <span>Change Picture</span></label>
+                                 <ul class="file-links">
+                                    <!--<li ng-repeat="file in files">{{file.name}}</li>-->
+                                    <li id="vendorpicselect_file">{{vendorpicname}}</li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left">
+                              <h4>Vendor Information</h4>
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.vendorName.$invalid && !vendorForm.vendorName.$pristine }">
+                                 <input type="text" name="vendorName" class="form-control" ng-model="vendorprofile.vendorName"
+                                    placeholder="Vendor Name" required readonly>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--EMAIL-->
+                              <div class="form-group">
+                                 <input type="email" name="email" class="form-control" ng-model="vendorprofile.email"
+                                    placeholder="Email" readonly>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--country-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.country.$invalid && !vendorForm.country.$pristine }">
+                                 <input type="text" id="F" name="country" class="form-control" ng-model="vendorprofile.country"
+                                    placeholder="Country " required>
+                                 <p ng-show="vendorForm.country.$touched && vendorForm.country.$invalid" class="help-block">Country
+                                    is required</p>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--state-->
+                              <div class="form-group">
+                                 <div class="sec-block">
+                                    <select id="state" ng-model="vendorprofile.state" required>
+                                       <option value="">Select State</option>
+                                       <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                       <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                       <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                       <option value="Assam">Assam</option>
+                                       <option value="Bihar">Bihar</option>
+                                       <option value="Chandigarh">Chandigarh</option>
+                                       <option value="Chhattisgarh">Chhattisgarh</option>
+                                       <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                       <option value="Daman and Diu">Daman and Diu</option>
+                                       <option value="Delhi">Delhi</option>
+                                       <option value="Goa">Goa</option>
+                                       <option value="Gujarat">Gujarat</option>
+                                       <option value="Haryana">Haryana</option>
+                                       <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                       <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                       <option value="Jharkhand">Jharkhand</option>
+                                       <option value="Karnataka">Karnataka</option>
+                                       <option value="Kenmore">Kenmore</option>
+                                       <option value="Kerala">Kerala</option>
+                                       <option value="Lakshadweep">Lakshadweep</option>
+                                       <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                       <option value="Maharashtra">Maharashtra</option>
+                                       <option value="Manipur">Manipur</option>
+                                       <option value="Meghalaya">Meghalaya</option>
+                                       <option value="Mizoram">Mizoram</option>
+                                       <option value="Nagaland">Nagaland</option>
+                                       <option value="Narora">Narora</option>
+                                       <option value="Natwar">Natwar</option>
+                                       <option value="Odisha">Odisha</option>
+                                       <option value="Paschim">Paschim Medinipur</option>
+                                       <option value="Pondicherry">Pondicherry</option>
+                                       <option value="Punjab">Punjab</option>
+                                       <option value="Rajasthan">Rajasthan</option>
+                                       <option value="Sikkim">Sikkim</option>
+                                       <option value="Tamil Nadu">Tamil Nadu</option>
+                                       <option value="Telangana">Telangana</option>
+                                       <option value="Tripura">Tripura</option>
+                                       <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                       <option value="Uttarakhand">Uttarakhand</option>
+                                       <option value="Vaishali">Vaishali</option>
+                                       <option value="West Bengal">West Bengal</option>
+                                    </select>
+                                 </div>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                                 <p id="id2" class="help-block"></p>
+                              </div>
+                              <!--CIty-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.city.$invalid && !vendorForm.city.$pristine }">
+                                 <input type="text" id="F" name="city" class="form-control" ng-model="vendorprofile.city"
+                                    placeholder="city " required>
+                                 <p ng-show="vendorForm.city.$touched && vendorForm.city.$invalid" class="help-block">city
+                                    is required</p>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--area-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.area.$invalid && !vendorForm.area.$pristine }">
+                                 <input type="text" id="F" name="area" class="form-control" ng-model="vendorprofile.area"
+                                    placeholder="Area " required>
+                                 <p ng-show="vendorForm.area.$touched && vendorForm.area.$invalid" class="help-block">Area
+                                    is required</p>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--street-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.street.$invalid && !vendorForm.street.$pristine }">
+                                 <input type="text" id="F" name="street" class="form-control" ng-model="vendorprofile.street"
+                                    placeholder="Street" required>
+                                 <p ng-show="vendorForm.street.$touched && vendorForm.street.$invalid" class="help-block">Street is
+                                    required</p>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--house Number-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.houseNumber.$invalid && !vendorForm.houseNumber.$pristine }">
+                                 <input type="text" id="F" name="houseNumber" class="form-control" ng-model="vendorprofile.houseNumber"
+                                    placeholder="Office Address " required>
+                                 <p ng-show="vendorForm.houseNumber.$touched && vendorForm.houseNumber.$invalid" class="help-block">Office
+                                    Address is required</p>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--pinCode-->
+
+
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.pinCode.$invalid && !vendorForm.pinCode.$pristine }">
+                                 <input type="text" name="pinCode" class="form-control" ng-model="vendorprofile.pinCode"
+                                    placeholder="PinCode" id="m" maxlength="6" ng-pattern-restrict="^[0-9]*$" required>
+                                 <p ng-show="vendorForm.pinCode.$touched && vendorForm.pinCode.$invalid" class="help-block">PinCode
+                                    is required </p>
+
+
+
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+
+    <!-- MOBILE NUMBER-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.vendorTelephone.$invalid && !vendorForm.vendorTelephone.$pristine }">
+                                 <input type="text" id="mobile" name="vendorTelephone" class="form-control tin_box"
+                                    ng-model="vendorprofile.vendorTelephone" placeholder="Mobile Number" ng-pattern="/^[0-99]{1,100}$/"
+                                   onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 47 && event.charCode < 58)" maxlength="10" required>
+                                 <span ng-show="vendorForm.vendorTelephone.$error.pattern" class="help-block">Not a
+                                    valid number!</span>
+                                 <p ng-show="vendorForm.vendorTelephone.$touched && vendorForm.vendorTelephone.$invalid"
+                                    class="help-block">Mobile Number is required</p>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--FAX NUMBER-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.vendorFax.$invalid && !vendorForm.vendorFax.$pristine }">
+                                 <input type="text" name="vendorFax" class="form-control tin_box" ng-model="vendorprofile.vendorFax"
+                                    placeholder="Fax Number" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 47 && event.charCode < 58)" maxlength="10">
+                                 <!--<p ng-show="vendorForm.vendorFax.$invalid && !vendorForm.vendorFax.$pristine" class="help-block"> Fax Number is required</p>-->
+                                 <p ng-show="vendorForm.vendorFax.$touched && vendorForm.vendorFax.$invalid" class="help-block">Fax
+                                    Number is required</p>
+                                 <!--<i class="fa fa-star" aria-hidden="true"></i>-->
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 right">
+                              <h4>Company Information</h4>
+                              <div class="form-group">
+                                 <div class="sec-block">
+                                    <select id="ConstitutionofFirm" ng-model="vendorprofile.vendorConstFirm" required>
+                                       <option value="">Select Constitution of Firm</option>
+                                       <option value="Manufacture">Manufacturer</option>
+                                       <option value="Dealer">Dealer</option>
+                                       <option value="Retailer">Retailer</option>
+                                    </select>
+                                 </div>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                                 <p id="id5" class="help-block"></p>
+                              </div>
+                              <div class="form-group">
+                                 <div class="sec-block">
+                                    <select id="NatureofCompany" ng-model="vendorprofile.vendorCompanyNature" required>
+                                       <option value="">Select Nature of Company</option>
+                                       <option value="Large Scale">Large Scale</option>
+                                       <option value="Small Scale">Small Scale</option>
+                                    </select>
+                                 </div>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                                 <p id="id6" class="help-block"></p>
+                              </div>
+                              <!--Reg No-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.vendorRegistrationNo.$invalid && !vendorForm.vendorRegistrationNo.$pristine }">
+                                 <input type="text" name="vendorRegistrationNo" class="form-control tin_box" ng-model="vendorprofile.vendorRegistrationNo"
+                                    placeholder="Reg Number " onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 47 && event.charCode < 58)" maxlength="10"  required>
+                                 <!--<p ng-show="vendorForm.vendorRegistrationNo.$invalid && !vendorForm.vendorRegistrationNo.$pristine" class="help-block"> Registration Number is required</p>-->
+                                 <p ng-show="vendorForm.vendorRegistrationNo.$touched && vendorForm.vendorRegistrationNo.$invalid"
+                                    class="help-block">Registration Number is required</p>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--GST No-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.gst.$invalid && !vendorForm.gst.$pristine }">
+                                 <input type="text" id="G" name="gst" class="form-control tin_box" ng-model="vendorprofile.gst"
+                                    placeholder="GST Number" ng-pattern-restrict="^[A-Z0-9]*$" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 47 && event.charCode < 58)" maxlength="15" required>
+                                 <!--<p ng-show="vendorForm.vatRegNo.$invalid && !vendorForm.vatRegNo.$pristine" class="help-block"> Vat  Number is required</p>-->
+                                 <p ng-show="vendorForm.gst.$touched && vendorForm.gst.$invalid" class="help-block">Enter your 15 digits GST number</p>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--Pan No-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.vendorPAN.$invalid && !vendorForm.vendorPAN.$pristine }">
+                                 <input type="text" style="text-transform: uppercase" name="vendorPAN" class="form-control tin_box"
+                                    ng-model="vendorprofile.vendorPAN" placeholder="PAN Number " ng-pattern='^[A-Z0-9]$'
+                                    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 47 && event.charCode < 58)" maxlength="10" required>
+                                 <!-- <p ng-show="vendorForm.vendorPAN.$invalid && !vendorForm.vendorPAN.$pristine" class="help-block"> Pan Number is required</p>-->
+                                 <p ng-show="vendorForm.vendorPAN.$touched && vendorForm.vendorPAN.$invalid" class="help-block">PAN
+                                    Number is required</p>
+                                 <i class="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                              <!--Labour license number-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.vendorLicense.$invalid && !vendorForm.vendorLicense.$pristine }">
+                                 <input type="text" name="vendorLicense" class="form-control tin_box" ng-model="vendorprofile.vendorLicense"
+                                    placeholder="License Number" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 47 && event.charCode < 58)" maxlength="10">
+                                 <!-- <p ng-show="vendorForm.vendorLicense.$invalid && !vendorForm.vendorLicense.$pristine" class="help-block"> License Number is required</p>-->
+                                 <p ng-show="vendorForm.vendorLicense.$touched && vendorForm.vendorLicense.$invalid"
+                                    class="help-block">License Number is required</p>
+                                 <!--  <i class="fa fa-star" aria-hidden="true"></i>-->
+                              </div>
+                              <h6 class="hide">Valid authorization of dealership certificate for supply of products</h6>
+                              <div class="form-group">
+                                 <div class="sec-block v-info">
+                                    <select ng-init="fileID = fileOptions[0].value" ng-model="fileID" ng-options="option.value as option.name for option in fileOptions">
+                                    </select>
+                                 </div>
+                                 <!-- <span class="v-info upld"><i class="fa fa-upload" aria-hidden="true"></i></span> -->
+                                 <!-- <button type="button" class="select-certificate btn btn-info btn-lg"><i class="fa fa-upload" aria-hidden="true"></i></button> -->
+                                 <span class="v-info upld"><input name="{{fileID}}" id="{{fileID}}" class="inputfile inputfile-2 vendorcert"
+                                       type="file" ng-model="vendorprofile.vendorAuthCert" />
+                                    <label for="{{fileID}}"><span><i class="fa fa-upload" aria-hidden="true"></i></span></label>
+                                 </span>
+                                 <p class="s-file" ng-show="cert"><a href="{{vendorprofile.vendorAuthCert}}" target="_blank">View
+                                       Certificate</a></p>
+                                 <p class="s-file" ng-show="files1"><a href="{{vendorprofile.file1}}" target="_blank">View
+                                       File 1</a></p>
+                                 <p class="s-file" ng-show="files2"><a href="{{vendorprofile.file2}}" target="_blank">View
+                                       File 2</a></p>
+                                 <p class="s-file" ng-show="files3"><a href="{{vendorprofile.file3}}" target="_blank">View
+                                       File 3</a></p>
+                                 <ul class="file-links">
+                                    <!--<li ng-repeat="file in files">{{file.name}}</li>-->
+                                    <li id="vendorcert_select"></li>
+                                 </ul>
+                              </div>
+                              <!--Experience in the Industry-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.vendorExpLine.$invalid && !vendorForm.vendorExpLine.$pristine }">
+                                 <input type="text" id="J" name="vendorExpLine" class="form-control" ng-model="vendorprofile.vendorExpLine"
+                                    placeholder="Experience in the Industry">
+                                 <p ng-show="vendorForm.vendorExpLine.$touched && vendorForm.vendorExpLine.$invalid"
+                                    class="help-block">Required</p>
+                                 <!--<p ng-show="vendorForm.vendorExpLine.$invalid && !vendorForm.vendorExpLine.$pristine" class="help-block"> Required</p>-->
+                                 <!-- <i class="fa fa-star" aria-hidden="true"></i>-->
+                              </div>
+                              <!--Major Clients-->
+                              <div class="form-group" ng-class="{ 'has-error' : vendorForm.vendorMajorCust.$invalid && !vendorForm.vendorMajorCust.$pristine }">
+                                 <input type="text" name="vendorMajorCust" class="form-control" ng-model="vendorprofile.vendorMajorCust"
+                                    placeholder="Major Clients">
+                                 <p ng-show="vendorForm.vendorMajorCust.$touched && vendorForm.vendorMajorCust.$invalid"
+                                    class="help-block">Required</p>
+                                 <!--<p ng-show="vendorForm.vendorMajorCust.$invalid && !vendorForm.vendorMajorCust.$pristine" class="help-block"> Required</p>-->
+                                 <!-- <i class="fa fa-star" aria-hidden="true"></i>-->
+                              </div>
+                           </div>
+                           <div class="form-group reg-btn">
+                              <button type="submit" class="btn btn-primary" ng-disabled="vendorForm.$invalid" value="Update"
+                                 title="Update" ng-click="vendorUpdate(vendorprofile)"><span>Update</span> </button>
+                           </div>
+                           <div class="clearfix"></div>
+                           <div class="alert alert-warning " ng-if="errmsg">
+                              <span class="close" data-dismiss="alert" aria-label="close" ng-click="alerthide()">&times;</span>
+                              <strong> </strong>{{errmessage}}
+                           </div>
+                        </form>
+                     </div>
+                  </section>

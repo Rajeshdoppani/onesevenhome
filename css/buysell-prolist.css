@@ -1,0 +1,432 @@
+.category-menu ul li a {
+    border-bottom: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+}
+#progridview .todaydeals figure a {
+    width: 180px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+#buy-sell-plistview .row{
+	margin:0;
+}
+#buy-sell-plistview .title {
+    background-image: url("http://onesevenhome.com/img/title-bg.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-bottom: 20px;
+	height:auto;
+}
+#buy-sell-plistview .title .sec-title {
+    margin: 50px 0 20px;
+}
+#buy-sell-plistview .title .sec-title strong {
+    border:none;
+    padding: 0px;
+	border-bottom: 2px solid #f00;
+}
+#buy-sell-plistview .title .sub-tag {
+    margin: 0 auto 30px;
+    max-width: 100%;
+    text-align: center;
+}
+#buy-sell-plistview .title .sub-tag a {
+    color: #ff0000;
+}
+
+.buysell-block {
+    display: block;
+	overflow:hidden;
+}
+.buysell-block.reg .breadcrumbs{
+    border: medium none;
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+	color:#000000;
+}
+.buysell-block.reg .breadcrumbs a{
+	margin:0 0px 0 0;
+	color:#000000;
+}
+
+
+.bs-content.reg h3{
+	color:#000000;
+	font-size:20px;
+	font-weight:bold;
+	margin:0;
+}
+
+
+@media screen and (min-width: 1400px) {
+	.bs-banner figure{
+		height:700px;
+	}
+	.bs-banner figcaption {
+		font-size: 170px;
+		line-height: 85px;
+		top:56%;
+	}
+	.bs-banner figcaption::after {
+		bottom: -50px;
+	}
+	.bs-top {
+		margin-bottom: 110px;
+	}
+	.buy-slide .slick-dots {
+		bottom: 25px;
+	}
+	.bs-links h3 {
+		font-size: 26px;
+	}
+	.bs-links label {
+		font-size: 18px;
+	}
+	.bs-btm h2 {
+		font-size: 24px;
+	}
+	
+}
+
+@media screen and (min-device-width: 1101px) and (max-device-width: 1300px) { 
+	.bs-top .bs-block{
+		margin:0 68px 20px 0;
+	}
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1100px) { 
+	.bs-banner figure {
+		height: auto;
+	}
+	.bs-links {
+		height: 60px;
+		padding-bottom: 30px;
+	}
+	.bs-links .left {
+		float: left;
+		left: 0;
+		position: relative;
+		top: inherit;
+	}
+	.bs-links h3 {
+		bottom: -10px;
+		left: 0;
+		position: absolute;
+		right: 0;
+	}
+	.bs-links .right {
+		float: right;
+		margin: 0;
+		position: relative;
+		right: 0;
+		top: inherit;
+	}
+	.bs-top .bs-block {
+		margin: 0 0 20px;
+		width: 20%;
+	}
+	.bs-top figure, .bs-top figure.bs-main a {
+		margin: 0 auto;
+		width: 190px;
+	}
+	
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1000px) {
+	.bs-top .bs-block {
+		width: 33.33%;
+	}
+	
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 900px) {
+	.bs-banner figcaption::after {
+		bottom: -10px;
+	}
+	.bs-banner figcaption {
+		top: 40%;
+	}
+}
+
+@media screen and (max-width:767px){
+	.bs-banner figure {
+		height: auto;
+	}
+	.bs-banner figcaption {
+		font-size: 60px;
+		top: 35%;
+	}
+	.bs-banner figcaption::after {
+		bottom: -15px;
+	}
+	.bs-top .bs-block {
+		margin: 0 auto 20px;
+		width: 33.33%;
+	}
+	.bs-top figure, .bs-top figure.bs-main a{
+		width:190px;
+		margin:0 auto;
+	}
+	.bs-links {
+		height: auto;
+		margin: 0 0 20px;
+		padding: 0 0 30px;
+	}
+	.bs-links .left {
+		left: inherit;
+		margin: 0 0 10px;
+		position: relative;
+		top: inherit;
+	}
+	.bs-links label{
+		width:145px;
+	}
+	.bs-links .right {
+		margin: 0;
+		position: relative;
+		right: inherit;
+		top: inherit;
+	}
+	.bs-links .right span {
+		display: inline-block;
+		margin: 0 0 10px;
+	}
+	.bs-links .right span:last-child {
+		margin: 0 0 10px;
+	}
+	.bs-links h3 {
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		position: absolute;
+		right: 0;
+	}
+	.bs-btm .todaydeals button{
+		width:auto;
+	}	
+}
+
+@media screen and (max-width:600px){
+	.bs-top .bs-block {
+		margin: 0 auto 20px;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width:500px){
+	.bs-banner figcaption::after {
+		bottom: -10px;
+		width: 85px;
+	}
+	.bs-banner figcaption {
+		font-size: 40px;
+	}
+	.bs-btm h2{
+		text-align:left;
+	}
+	.bs-btm-slide-blck{
+		display:block !important;
+		width:95% !important;
+		margin:0 auto;
+	}
+
+
+}
+
+@media screen and (max-width:400px){
+	.bs-banner figcaption {
+		font-size: 30px;
+		top: 20%;
+	}
+	.bs-top .bs-block, .bs-top .bs-block:last-child {
+		float: none;
+		margin: 0 0 20px;
+		width:100%;
+	}
+}
+
+
+/***bs-listing*****/
+#buy-sell-plistview .bs-content.plistview{
+	margin: 0;
+    padding: 0 0px 35px 20px;
+}
+#buy-sell-plistview .bs-content.plistview label {
+    color: #000000;
+    display: inline-block;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+#buy-sell-plistview .bs-content.plistview input {
+    background: #f7f7f7;
+    border: 1px solid #898989;
+    color: #000000;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0 10px;
+	cursor:inherit;
+	height:30px;
+	box-shadow:2px 3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+#buy-sell-plistview .bs-content.plistview input::-moz-placeholder {
+    color: #000000;
+    opacity: 1;
+}
+#buy-sell-plistview .bs-content.plistview .right span{
+	padding-left: 24px;
+}
+#buy-sell-plistview .bs-content.plistview .left input{
+	width: 245px;
+}
+#buy-sell-plistview .bs-content.plistview .right .select-city input{
+	width:190px;
+}
+#buy-sell-plistview .bs-content.plistview .right .location input{
+	width:180px;
+}
+#buy-sell-plistview .bs-content.plistview .right .min-price input{
+	width:150px;
+}
+#buy-sell-plistview .bs-sec-block{
+	display:inline-block;
+}
+#buy-sell-plistview .bs-content.plistview .right .bs-sec-block button{
+	 border-radius: 3px;
+	box-shadow: none;
+    border: 1px solid #000000;
+    background: #000000;
+	width: 106px;
+    height: 32px;
+    color: #fff;
+    font-size: 16PX; 
+}
+#buy-sell-plistview .left{
+	display: inline-block;
+    float: left;
+}
+#buy-sell-plistview .buylist label {
+    color: #000000;
+    display: inline-block;
+    font-family: arial;
+    font-size: 16px;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+#buy-sell-plistview .sec-block {
+    background-color: #ffffff;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: auto;
+    z-index: 0;
+	box-shadow:2px 3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+#buy-sell-plistview .sec-block::before {
+    content:"\f107";
+    font-family: fontawesome;
+    font-size: 18px;
+    position: absolute;
+    right: 15px;
+    top: 3px;
+    z-index: -1;
+}
+#buy-sell-plistview .sec-block select {
+    -moz-appearance: none;
+	appearance: none;
+	-webkit-appearance:none;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #9d9d9d;
+    color: #000000;
+    cursor: pointer;
+    font-size: 15px;
+    height: 30px;
+    padding: 0 10px;
+    width: 130px;
+    z-index: 0;
+}
+.buysell-block.plistview {
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    width: 24%;
+    left: 23%;
+}
+.buylist .bs-links .right {
+    float: right;
+    padding: 0 20px 0 0;
+}
+.buylist p.s-result {
+    color: #333333;
+    font-size: 16px;
+}
+.buylist .bs-links i.fa{
+	color:#333333;
+	cursor:pointer;
+}
+.buylist .bs-links i.fa.fa-th{
+	padding-right: 10px;
+}
+.buylist .bs-links i.fa.active {
+    color: #ee3135;
+}
+.va {
+    background-color: #d7d7d7;
+    color: #ffffff;
+    float: left;
+    font-size: 12px;
+    margin-right: 0;
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 110px;
+    z-index: 1;
+}
+a.va:hover {
+	background: #000;
+	color:#ffffff;
+	border:none;
+}
+.t-pro-right {
+    float: left;
+    position: relative;
+    left: 5%;
+    top: 39px;
+}
+#prolistview{
+	overflow:hidden;
+	display:none;
+}
+#prolistview .list-view .t-pro{
+	overflow:hidden;
+}
+#prolistview .list-view figure{
+	float:left;
+	margin-right: 10px;
+}
+#prolistview .list-view .t-pro-right h3 {
+    font-weight:normal;
+    color: #212121;
+	height:auto;
+	overflow:visible;
+	font-size:15px;
+	margin:0;
+}
+#prolistview .list-view .t-pro-right h4, #prolistview .list-view .t-pro-right i.fa.fa-inr{
+    font-size: 24px;
+}
+.buylist .bs-links .sec-block select {
+    width: 145px;
+}
+
+

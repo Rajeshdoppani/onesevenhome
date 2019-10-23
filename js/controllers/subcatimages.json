@@ -1,0 +1,99 @@
+
+     [
+      {
+        "categoryName": "Computers",
+        "subCategory": [
+          {
+            "subCategoryName": "Desktops",
+            "subCategoryImageURL": "/img/subCat/computers/desktop.jpg",
+            "subCategoryId": 94
+          },
+          {
+            "subCategoryName": "Laptops",
+            "subCategoryImageURL": "/img/subCat/computers/laptop.jpg",
+            "subCategoryId": 97
+          },
+          {
+            "subCategoryName": "Tablets",
+            "subCategoryImageURL": "/img/subCat/computers/tablet.jpg",
+            "subCategoryId": 98
+          },
+          {
+            "subCategoryName": "Storage & Hard Drives",
+            "subCategoryImageURL": "/img/subCat/computers/storage.jpg",
+            "subCategoryId": 95
+          }
+         ]
+      },
+      {
+        "categoryName": "Building Materials",
+        "subCategory": [
+          {
+            "subCategoryName": "Bricks",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1513606090938_bricks1.png",
+            "subCategoryId": 53
+          },
+          {
+            "subCategoryName": "Aggregates",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1513606183383_aggregate.png",
+            "subCategoryId": 52
+          },
+          {
+            "subCategoryName": "Cement",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1513606226944_cement1.png",
+            "subCategoryId": 56
+          },
+          {
+            "subCategoryName": "Drainage & Supplies",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1513606266982_drinage.png",
+            "subCategoryId": 58
+          },
+          {
+            "subCategoryName": "Steel & Iron",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1513606526142_iron.png",
+            "subCategoryId": 61
+          },
+          {
+            "subCategoryName": "Construction Safety Products",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1517038904687_Building_Meterials_4.jpg",
+            "subCategoryId": 57
+          }
+        ]
+      },
+      {
+        "categoryName": "Timber or Wood Sheets & Hardware",
+        "subCategory": [
+          {
+            "subCategoryName": "Hardware Accessories",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1517039473324_Timber-or-Wood_Sheets_Hardware_1.jpg",
+            "subCategoryId": 112
+          },
+          {
+            "subCategoryName": "Door Handles",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1517039509958_Timber-or-Wood_Sheets_Hardware_4.jpg",
+            "subCategoryId": 111
+          },
+          {
+            "subCategoryName": "Locks",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1517039526829_Timber-or-Wood_Sheets_Hardware_5.jpg",
+            "subCategoryId": 110
+          },
+          {
+            "subCategoryName": "Plywood Sheets",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1517039723001_Timber-or-Wood_Sheets_Hardware_6.jpg",
+            "subCategoryId": 107
+          },
+          {
+            "subCategoryName": "Special Wood",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1517039741811_Timber-or-Wood_Sheets_Hardware_3.jpg",
+            "subCategoryId": 119
+          },
+          {
+            "subCategoryName": "Teak Wood",
+            "subCategoryImageURL": "/opt/img/subcategoryimg/1517040005075_Timber-or-Wood_Sheets_Hardware_2.jpg",
+            "subCategoryId": 118
+          }
+        ]
+      }
+    ]
+  

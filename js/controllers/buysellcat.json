@@ -1,0 +1,43 @@
+ [
+	{
+	     "id":"Real Estate",
+		"title": "Real Estate",
+       "imgurl1": "img/buy-sell/bs-top1.jpg",
+	    "imgurl2": "img/buy-sell/bs-h1.png"
+
+
+	},
+	{
+	     "id":"Furniture & Decor",
+		"title": "Furniture & Decor",
+        "imgurl1": "img/buy-sell/bs-top2.jpg",
+	    "imgurl2": "img/buy-sell/bs-h2.png"
+
+
+	},
+	
+	{
+	    "id":"Electronics",
+		"title": "Electronics",
+      "imgurl1": "img/buy-sell/bs-top3.jpg",
+	    "imgurl2": "img/buy-sell/bs-h3.png"
+
+
+	},
+	{
+	   "id":"Kitchen Appliances",
+		"title": "Kitchen Appliances",
+        "imgurl1": "img/buy-sell/bs-top4.jpg",
+	    "imgurl2": "img/buy-sell/bs-h4.png"
+
+	},
+	{
+	   "id":"Home Amenities",
+		"title": "Home Amenities",
+     "imgurl1": "img/buy-sell/bs-top5.jpg",
+	    "imgurl2": "img/buy-sell/bs-h5.png"
+
+
+	}
+	
+	]

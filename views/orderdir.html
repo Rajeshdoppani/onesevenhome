@@ -1,0 +1,56 @@
+<div class="right">
+      <div class="home-top">
+         <ul class="links">
+            <!-- <li><a class="active" href="">Orders</a></li> -->
+            <!-- <li><a href="">Invoices</a></li> -->
+         </ul>
+         <div class="text-right">
+            <!-- <label>Sort By</label> -->
+            <!-- <div class="selectbox"> -->
+               <!-- <select> -->
+                  <!-- <option value="">Date</option> -->
+                  <!-- <option value="">13-10-2017</option> -->
+               <!-- </select> -->
+            <!-- </div> -->
+         </div>
+      </div>
+      <div class="acc-block">
+         <div class="table-responsive">
+            <table class="table">
+               <thead>
+                  <th>Order Id</th>
+                  <th>Order Date</th>
+                  <th>Order Amount</th>
+                  <th>Status</th>
+                  <th>View Details</th>
+               </thead>
+               <tbody>
+                  <tr ng-repeat="orderList in myorder">
+                     <td>
+                        <p>{{orderList.id}}</p>
+                     </td>
+                     <td>
+                        <p>{{orderList.datePurchased}}</p>
+                     </td>
+                     <td>
+                        <h6>
+                           <i class="fa fa-inr" aria-hidden="true"></i> {{ orderList.totalamt}}
+                        </h6>
+                     </td>
+                     <td>
+                        <h6>{{orderList.orderStatus}}</h6>
+                     </td>
+                     <td>
+                        <p class="link"><a class="View-details" ng-click="getOrder(orderList)" data-toggle="modal"
+                              data-target="#myModal">Details</a></p>
+                        <!--<a href="http://103.92.235.45/order/invoice/{{orderList.id}}" class="va">View Invoice</a>-->
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+          <div paging page="0" page-size="5" total=orderCount paging-action="numberorder(page, pageSize, total)">
+         </div>
+      </div>
+	 
+   </div>

@@ -1,0 +1,57 @@
+ [
+	{
+	     "id":7,
+		"title": " LG-Airconditions ",
+		"price": 0,
+       "imgurl1": "img/Electronics/LG-Airconditions/LG-Airconditions1.jpg"
+	    
+
+
+	},
+	{
+	     "id":8,
+		"title": " Symphony-coolr",
+		"price": 0,
+       "imgurl1": "img/Electronics/Symphony-coolr/Symphony-coolr1.jpg"
+	    
+
+
+	},
+	
+	{
+	     "id":9,
+		"title": "Samsung-Fridge",
+		"price": 0,
+       "imgurl1": "img/Electronics/Samsung-Fridge/Samsung-Fridge1.jpg"
+	    
+
+
+	},
+	{
+	     "id":10,
+		"title": "Samsung-TVs",
+		"price": 0,
+       "imgurl1": "img/Electronics/Samsung-TVs/Samsung-TVs1.jpg"
+	    
+
+
+	},
+	{
+	     "id":11,
+		"title": "Samsung-washing",
+		"price": 0,
+       "imgurl1": "img/Electronics/Samsung-washing/Samsung-washing1.jpg"
+
+
+	},
+	{
+	     "id":12,
+		"title": "  Bajaj-hter",
+		"price": 0,
+       "imgurl1": "img/Electronics/Bajaj-hter/Bajaj-hter1.jpg"
+	    
+
+
+	}
+	
+	]

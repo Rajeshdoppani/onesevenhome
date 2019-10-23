@@ -1,0 +1,638 @@
+<div class="wrap">
+   <!-- Static navbar -->
+   <section class="top" id="top-header">
+      <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 shipping-text"> Free Shipping on Orders <i class="fa fa-rupee"></i> 5000 and
+               Above </div>
+            <div class="col-xs-12 col-sm-6 links">
+               <a href="#contact" class="right-links">Contact Us</a> <span ng-hide="userlogged"><a href="#/login" class="right-links">Login
+                  </a> <a href="#/registration"> Signup</a></span><span class="login-btn" ng-show="userlogged">{{loggedInUserName}}</span>
+               <!--=== LOGOUT SECTION ===-->
+               <div class="myprofile-block">
+                  <div class="mypro-brdr">
+                     <div class="pro-top">
+                        <!--<a href="#" class="pro-pic">
+                           <img src="img/tst-pic.jpg"/>
+                           <span>Change</span>
+                           </a>-->
+                        <div class="pro-txt">
+                           <h3>{{loggedInUserName}}</h3>
+                           <h4>{{loggedInUser}}</h4>
+                        </div>
+                     </div>
+                     <div class="pro-btm">
+                        <span class="mypro-btn" ng-click="myProfile()"><a>My profile</a></span>
+                        <span class="mypro-logout" ng-click="logout()"><a>Log Out</a></span>
+                     </div>
+                  </div>
+               </div>
+               <a href="#cart" class="cart">
+                  <!--<i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> -->
+                  <img src="img/cart1.png">
+                  <span class="cart-value"> {{lengthofcart}}</span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <header class="header">
+      <header-Directive></header-Directive>
+      <category-Directive></category-Directive>
+   </header>
+
+   <div class="container">
+      <div class="breadcrumbs">
+         <a href="#/">Home</a> &gt;
+         <a href="#/categories/{{categoryName}}">{{categoryName}}</a>
+         &gt;
+         <a href="#/sub_category/{{categoryName}}/categories/{{subCategoryName}}" >{{subCategoryName}}</a>
+         &gt;
+         <span>{{ppage.productTitle}}</span>
+       </div>
+   </div>
+   <div class="prd">
+      <section class="prd-detail">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5 product-lef-sec">
+                  <div class="prd-tb">
+                     <div id="img-1">
+                        <img ng-src="{{ppage.defaultImage}}" ng-click="setImage(img)">
+                     </div>
+                     <div id="img-2">
+                        <img ng-if="ppage.productImages.length !== 0 && (ppage.productImages.length == 1 || ppage.productImages.length == 2 || ppage.productImages.length == 3)" ng-src="{{ppage.productImages[0]}}" ng-click="setImage(img)">
+                     </div>
+                     <div id="img-3">
+                        <img ng-if="ppage.productImages.length !== 0 && (ppage.productImages.length == 2 || ppage.productImages.length == 3)" ng-src="{{ppage.productImages[1]}}" ng-click="setImage(img)">
+                     </div>
+                     <div id="img-4">
+                        <img ng-if="ppage.productImages.length !== 0 && ppage.productImages.length == 3" ng-src="{{ppage.productImages[2]}}" ng-click="setImage(img)">
+                     </div>
+                  </div>
+                  <div class="prd-lg" id="screen1">
+                     <a><img ng-src="{{ppage.defaultImage}}"></a>
+                  </div>
+                  <div class="prd-lg" id="screen2">
+                     <a><img ng-src="{{ppage.productImages[0]}}"></a>
+                  </div>
+                  <div class="prd-lg" id="screen3">
+                     <a><img ng-src="{{ppage.productImages[1]}}"></a>
+                  </div>
+                  <div class="prd-lg" id="screen4">
+                     <a><img ng-src="{{ppage.productImages[2]}}"></a>
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-8 col-md-5 col-lg-5 product-mid-sec">
+                  <h2>{{ppage.productTitle}}</h2>
+                  <div class="rating">
+                     <ion-content>
+                        <ion-list>
+                           <ion-item ng-repeat="rating in ratings">
+                              <span class="stars">
+                                 <span ng-style="{ 'width': getStars(rating.number) }"></span>
+                              </span>
+                           </ion-item>
+                        </ion-list>
+                     </ion-content>
+                     <p>
+                        <span class="reviews">{{averagereview}}/5 ({{totalreview}} Reviews)</span>
+                        -
+                        <span class="reviews-ans">50 Answered Questions</span>
+                     </p>
+                  </div>
+                  <p>{{ppage.shortDesc}}</p>
+                  <div class="price" ng-show="showPrice"><i class="fa fa-inr" aria-hidden="true"></i>
+                     {{ppage.productDiscountPrice}}</div>
+                  <div class="price" ng-show="originalPriceValue"><i class="fa fa-inr" aria-hidden="true"></i>
+                     {{ppage.productOriginalPrice}}
+                     <div class="mrp">M.R.P: Rs.995.00 You Save: Rs.346.00 (35%) Inclusive of all taxes</div>
+                  </div>
+                  <div class="price-off" ng-show="showPrice"> <span><i class="fa fa-inr" aria-hidden="true"></i>
+                        {{ppage.productOriginalPrice}} </span> <b class="dis_off">{{ppage.discountPercentage}}% OFF</b>
+                  </div>
+                  <div class="prd-add">
+                     <span>Qty :</span>
+                     <input class="select-number" ng-init="quantity = 1" name="quantity" id="quantity" type="text"
+                        ng-model="quantity" ng-pattern="/^[0-9]+$/" required>
+                     <button class="addtocart" ng-click="addcart(quantity)" id="del_event" disabled>Add to Cart</button><small>*
+                        Please select a vendor</small>
+                     <div ng-show="form.$submitted">
+                        <p class="help-block">Please agree and sign.</p>
+                     </div>
+                  </div>
+                  <div class="product-des-sec">
+                     <h2>Product Description</h2>
+                     <p>{{ppage.productDescription}}</p>
+                  </div>
+
+                  <div class="quality-pro-sec">
+                     <img src="img/prodpage-img/Quality-Promise.jpg">
+                     <h2>Quality Promise</h2>
+                     <p>We ensure the best quality products are provided to our customers by meticulously selecting the
+                     vendors and continuously evaluating them to ensure minimal defects. Our team of industry experts
+                     and domain specialist ensure the products delivered are of best in class quality. Prior mystery
+                     visits are made to vendor sites and delivery locations to ensure superior quality.</p>
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 estimated-sec">
+                  <div class="prd-dlvry">
+                     <img src="img/prodpage-img/Est-delivery-icon.jpg">
+                     <div class="estimate">Estimated delivery in 12 to 24 Hours</div>
+                  </div>
+                  <div class="prd-dlvry stan-deli-sec">
+                     <img src="img/prodpage-img/standard-deli-icon.jpg">
+                     <div class="standard">
+                        Standard Delivery charges applicable
+                        <span class="popup">
+                           <b class="qtn">?</b>
+                           <div class="cart-terms popuptext">
+                              <h6>Terms & Conditions</h6>
+                              <p>This following sets out the terms and conditions on which you may use the content on
+                                 bother digital publishing services www.osh.com owned by business standard content
+                                 services.</p>
+                           </div>
+                        </span>
+                        <span><a href="">Check your location for product availability</a></span>
+                     </div>
+                  </div>
+                  <div class="product-services">
+                     <h1>SERVICES</h1>
+                     <img src="{{serviceData.imageURL1}}">
+                     <h2>{{serviceData.serviceType}}</h2>
+                     <p>If you need any help, please <a href="#/detailservices/{{serviceData.serviceType}}/{{serviceData.id}}">contact here</a></p>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="prd-select-list">
+         <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 tdm-block">
+               <div class="head">
+                  <h3>Select a Vendor
+                     <span></span></h3>
+                  <div class="todaydeals-sort">
+                     <ul>
+                        <li>
+                           <button ng-if="resetBtn" ng-click="getVendorsByUserPincode()"> Reset</button>
+                        </li>
+                        <li>
+                           <form ng-submit="getpincode(postalCode)">
+                              <input type="text" placeholder="Enter Pincode" ng-model="postalCode" class="srch-pin"
+                                 ng-pattern-restrict="^[0-9]*$" maxlength='6' /><span class="srch-btn" ng-click="getpincode(postalCode)"><i
+                                    class="fa fa-search"></i></span>
+                           </form>
+                        </li>
+                        <li class="sec-block">
+                           <select>
+                              <option value="">Distance</option>
+                              <option value="">Distance</option>
+                           </select>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="prds">
+                  <ul>
+                     <slick settings="slickproductpageConfig" ng-if="productpageLoaded">
+                        <li ng-repeat="pagedesc in pagep track by $index">
+                           <figure>
+                              <a> <img ng-src="{{pagedesc.vendorImageURL || 'img/no-image.jpg'}}"> </a>
+                           </figure>
+                           <h4>{{pagedesc.vendorName}}</h4>
+                           <h5>
+                              <input id="{{pagedesc.vendorName}}" class="vendorCheck" type="checkbox" ng-model="pagedesc.checked" ng-click="updateSelection($index, pagep, pagedesc)" name="{{$index}}">
+                              <label for="{{pagedesc.vendorName}}"></label>
+                           </h5>
+                        </li>
+                     </slick>
+                  </ul>
+                  <h4 ng-show="notLoggedIn">{{message}}</h4>
+                  <div class="er-links" ng-show="err">
+                     <a href="#/postrequire">Post A Requirement</a>
+                     <a href="#/contact">Contact Us</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="fp" class="pro-recommended">
+         <div class="container">
+            <h2 class="sec-title3"><strong>Recommended Products </strong></h2>
+            <slick settings="slickrecommendedprocutsConfig" ng-if="RecomendLoaded">
+               <li class="block" ng-repeat="image in recommend">
+                  <div class="t-pro">
+                     <figure>
+                        <a href="#/productpage/{{image.productId}}"><img data-lazy="{{image.defaultImage}}"></a>
+                     </figure>
+                     <h3> {{image.productName}}</h3>
+                     <h4><i class="fa fa-inr" aria-hidden="true"></i> {{image.productPrice}}</h4>
+                     <a href="#/productpage/{{image.productId}}" class="va">View Details</a>
+                  </div>
+               </li>
+            </slick>
+         </div>
+      </section>
+
+      <section class="customer-qa-sec">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12 col-sm-7 col-md-7 col-lg-9">
+                  <div class="cust-qa-an">
+                     <h1>Customer questions & answers</h1>
+                     <ul>
+                        <li>
+                           <div class="q-sec">Q/A)</div>
+                           <div class="qa-sec">
+                              <div class="question"><span>Question:</span> Will it suits for hp omen 15?</div>
+                              <div class="answer"><span>Answer:</span> No it will not since its size is 11 inch </div>
+                              <div class="owner">By Product owner on 17 December, 2018</div>
+                           </div>
+                        </li>
+
+                        <li>
+                           <div class="q-sec">Q/A)</div>
+                           <div class="qa-sec">
+                              <div class="question"><span>Question:</span> Is it compatible with washing basin?</div>
+                              <div class="answer"><span>Answer:</span> In my opinion, this item is not suitable for
+                                 ceramic wash basin, granite top, etc.. Because the threaded portion at the bottom is
+                                 very short.</div>
+                              <div class="owner">By Product owner on 17 December, 2018</div>
+                           </div>
+                        </li>
+
+                        <li>
+                           <div class="q-sec">Q/A)</div>
+                           <div class="qa-sec">
+                              <div class="question"><span>Question:</span> This product company warrenti what</div>
+                              <div class="answer"><span>Answer:</span> 12 months </div>
+                              <div class="owner">By Product owner on 18 December, 2018</div>
+                           </div>
+                        </li>
+
+                        <li>
+                           <div class="q-sec">Q/A)</div>
+                           <div class="qa-sec">
+                              <div class="question"><span>Question:</span> What is the length of the threaded part?</div>
+                              <div class="answer"><span>Answer:</span> 1.25 inch </div>
+                              <div class="owner">By Product owner on 20 December, 2018</div>
+                           </div>
+                        </li>
+                     </ul>
+                     <span class="show-more-aq"><a>Show more answered questions (54)</a></span>
+                  </div>
+
+                  <div class="customer-reviews-sec">
+                     <h1>Customer Reviews <a data-toggle="modal" href="" ng-click="openWriteReview()" ng-show="showReview">Write a review</a></h1>
+                     <div class="c-r-list" ng-repeat="reviews in userRatings">
+                        <h3><img src="img/prodpage-img/reviews-icon.png">{{reviews.name}}</h3>
+                        <h3>
+                           <div class="rating">
+                              <ion-content>
+                                 <ion-list>
+                                    <ion-item>
+                                       <span class="stars">
+                                          <span ng-style="{ 'width': getStars(reviews.reviewRating) }"></span>
+                                       </span>
+                                    </ion-item>
+                                 </ion-list>
+                              </ion-content>
+                           </div>
+                        </h3>
+                        <h3>{{reviews.reviewDate | date:'dd-MMM-yyyy'}}</h3>
+                        <p>{{reviews.description}}</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-5 col-md-5 col-lg-3">
+                  <div class="related-products-sec">
+                     <h1>Related Products</h1>
+                     <ul>
+                        <li ng-repeat="relate in relatedProductList">
+                           <div class="rp-img"><a href="#/productpage/{{relate.productId}}"><img ng-src="{{relate.defaultImage}}"></a></div>
+							      <div class="rp-cont">
+                           <div class="rating">
+                              <ion-content>
+                                 <ion-list>
+                                    <ion-item>
+                                       <span class="stars">
+                                          <span ng-style="{ 'width': getStars(relate.avgReview) }"></span>
+                                       </span>
+                                    </ion-item>
+                                 </ion-list>
+                              </ion-content>
+                           </div>
+                              <p>{{relate.productName}}</p>
+                              <p><span>₹ {{relate.productDiscountPrice !== null ? relate.productDiscountPrice : relate.productOriginalPrice}}</span> </p>
+                              <a href="#/productpage/{{relate.productId}}" class="va">View Details</a>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+      </section>
+      <section class="prd-mid" style="display:none;">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left">
+                  <h4>Description</h4>
+                  <p>{{ppage.productDescription}}</p>
+                  <h4 ng-show="showDescPoints">Technical Description</h4>
+                  <table class="des-table" border="0" ng-show="showDescPoints">
+                     <tr ng-repeat="x in array">
+                        <td class="lbl">{{x.title}}</td>
+                        <td class="val">{{x.value}}</td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 right">
+                  <h4>Quality Promise</h4>
+                  <p>We ensure the best quality products are provided to our customers by meticulously selecting the
+                     vendors and continuously evaluating them to ensure minimal defects. Our team of industry experts
+                     and domain specialist ensure the products delivered are of best in class quality. Prior mystery
+                     visits are made to vendor sites and delivery locations to ensure superior quality.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--
+      <section class="prd-mid btm" style="display:none;">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left">
+                  <h3>Reviews</h3>
+                  <div class="prd-rvw" ng-repeat="reviews in userRatings">
+                     <div class="rating">
+                        <ion-content>
+                           <ion-list>
+                              <ion-item>
+                                 <span class="stars">
+                                    <span ng-style="{ 'width': getStars(reviews.reviewRating) }"></span>
+                                 </span>
+                              </ion-item>
+                           </ion-list>
+                        </ion-content>
+                        <span class="prd-review"><b>{{reviews.description}}</b></span>
+                     </div>
+                     By
+                     <h5> {{reviews.name}}</h5>
+                     On
+                     <h6> {{reviews.reviewDate | date:'dd-MMM-yyyy'}}</h6>
+                  </div>
+                  <div paging page="1" page-size="5" total=uptotalCount paging-action="PagingAct(page, pageSize, total)">
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 right" ng-show="showReview">
+                  <h3>Add a Review</h3>
+                  <form class="prd-form" name="reviewForm">
+                     <fieldset ng-disabled="isDisabled">
+                        <div class="rating">
+                           <h4>Rating <span class="red">*</span></h4>
+                           <jk-rating-stars max-rating="5" rating="secondRate" on-rating="onItemRating(rating)"
+                              required>
+                           </jk-rating-stars>
+                        </div>
+                        <div class="form-group">
+                           <textarea name="review" ng-model="giveReview.description" placeholder="Review *" required></textarea>
+                        </div>
+                        <div class="form-group">
+                           <button type="submit" ng-disabled="reviewForm.$invalid" class="btn btn-default" ng-click="submitReview(giveReview)">Submit</button>
+                        </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="todaydeals rview" style="display:none;">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <h2 class="sec-title"><strong>Recently Bought</strong></h2>
+                  <ul class="all">
+                     <slick settings="slickrecentbroughtConfig" ng-if="RecentlyLoaded">
+                        <li ng-repeat="brought in recently">
+                           <div class="t-pro">
+                              <figure>
+                                 <a href="#/productpage/{{brought.productId}}"><img data-lazy="{{brought.imageURL}}"></a>
+                                 <span class="dis">{{brought.discountPercentage}}% OFF</span>
+                              </figure>
+                              <h3>{{brought.productName}}</h3>
+                              <h4><i class="fa fa-inr" aria-hidden="true"></i> {{brought.productDiscountPrice}}</h4>
+                              <a href="#/productpage/{{brought.productId}}" class="va">View Details</a>
+                           </div>
+                        </li>
+                     </slick>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </section>
+      -->
+
+      <!-- Compare with Related Products -->
+      <section>
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="compare-related-pro">
+                     <h1>COMPARE WITH RELATED PRODUCTS</h1>
+                     <ul class="compare-pel-pro-list">
+                        <!--<li class="comp-pri-sec">
+                           <div class="pro-addtocart">
+
+                           </div>
+                           <ul class="pro-price-det pri-sec">
+                              <li><strong>Price </strong></li>
+                              <li><strong>Shipping</strong></li>
+                              <li><strong>Sold By</strong></li>
+                              <li><strong>Colour</strong></li>
+                              <li><strong>Meterial Type</strong></li>
+                              <li><strong>Model Number</strong></li>
+                           </ul>
+                        </li>-->
+                        <li ng-repeat="prod in relatedProductList | limitTo : 5">
+                           <div class="pro-addtocart">
+                              <div class="pro-addcart-sec">
+                                 <a href="#/productpage/{{prod.productId}}"><img class="pro-img" ng-src="{{prod.defaultImage}}"></a>
+                                 <h2>{{prod.productName}} <strong>Rs. {{prod.productDiscountPrice !== null ? prod.productDiscountPrice : prod.productOriginalPrice}}</strong></h2>
+                                 <div class="reviews-ratings">
+									<ion-content>
+										<ion-list>
+											<ion-item>
+												<span class="stars">
+													<span ng-style="{ 'width': getStars(prod.avgReview) }"></span>
+												</span>
+											</ion-item>
+										</ion-list>
+									</ion-content>
+								 <span>Ratings : <strong>{{prod.totalratingCount}}</strong></span>
+								</div>
+                              </div>
+                              <a class="addtocart-but" href="#/productpage/{{prod.productId}}">Add to Cart</a>
+                           </div>
+                           <ul class="pro-price-det">
+                              <li><strong>Rs. {{prod.productDiscountPrice !== null ? prod.productDiscountPrice : prod.productOriginalPrice}}</strong></li>
+                              <li>Free Shipping</li>
+                              <li><span>Sura Traders</span></li>
+                              <li>Chrome</li>
+                              <li>100% Virgin Brass</li>
+                              <li>HNE_F100004QT</li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <div id="back-top">
+         <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-circle-o-up"></i></a>
+      </div>
+   </div>
+</div>
+<script>
+   jQuery(".popup .qtn").click(function () {
+      jQuery(".popuptext").toggle();
+   });
+   jQuery("#img-1").click(function () {
+      jQuery("#screen1").show();
+      jQuery("#screen2").hide();
+      jQuery("#screen3").hide();
+      jQuery("#screen4").hide();
+   });
+   jQuery("#img-2").click(function () {
+      jQuery("#screen2").show();
+      jQuery("#screen1").hide();
+      jQuery("#screen3").hide();
+      jQuery("#screen4").hide();
+   });
+   jQuery("#img-3").click(function () {
+      jQuery("#screen3").show();
+      jQuery("#screen1").hide();
+      jQuery("#screen2").hide();
+      jQuery("#screen4").hide();
+   });
+   jQuery("#img-4").click(function () {
+      jQuery("#screen4").show();
+      jQuery("#screen2").hide();
+      jQuery("#screen3").hide();
+      jQuery("#screen1").hide();
+   });
+   $("#quantity").keyup(function () {
+      var regex = /^[0-9]+$/;
+      if (regex.test(this.value) !== true)
+         this.value = this.value.replace(/[^0-9]+/, '');
+   });
+   $('input').on('input propertychange paste', function (e) {
+      var val = $(this).val()
+      var reg = /^0/gi;
+      if (val.match(reg)) {
+         $(this).val(val.replace(reg, ''));
+      }
+   });
+   $(".mobile-search .fa-search").click(function () {
+      $(".mobile-search input").toggle();
+   });
+</script>
+<div class="modal fade" id="vendorPopup" role="dialog">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Vendor Details</h4>
+         </div>
+         <div class="modal-body">
+            <div class="col-xs-12 col-sm-6 pull-left">
+               <!--Product Image -->
+               <figure class="dealpimg text-center">
+                  <img class="img-responsive" src="{{vendorDetails.imagePath}}" />
+               </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6  pull-right">
+               <!-- Product Description -->
+               <div class="form-group">
+                  <p><b>Name : </b>{{vendorDetails.name}}</p>
+                  <p><b>Address : </b>{{vendorDetails.address}}</p>
+                  <p><b>Email : </b>{{vendorDetails.email}}</p>
+                  <p><b>Firm Info : </b>{{vendorDetails.firmInfo}}</p>
+                  <p><b>Mobile : </b>{{vendorDetails.mobileNum}}</p>
+                  <p><b>Telephone : </b>{{vendorDetails.teleNum}}</p>
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Booking Success Popup -->
+<div class="modal fade successPopup" id="SuccessModal" tabindex="-1" role="dialog">
+   <div class="modal-dialog  modal-sm" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Success</h4>
+         </div>
+         <div class="modal-body">
+            <p><i class="fa fa-check fa-3x"></i><span>{{successMsg}}</span></p>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Failure Popup -->
+<div class="modal fade errorPopup" id="errorModalPopup" tabindex="-1" role="dialog">
+   <div class="modal-dialog  modal-sm" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Error</h4>
+         </div>
+         <div class="modal-body">
+            <p><i class="fa fa-warning fa-3x"></i><span>{{failureMsg}}</span></p>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Write A Review Modal -->
+<div class="modal fade" id="writeReviewModal" role="dialog">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">Write a review</h4>
+       </div>
+       <div class="modal-body">
+         <form class="prd-form" name="reviewForm">
+            <div class="rating">
+               <h4>Rating <span class="red">*</span></h4>
+               <jk-rating-stars max-rating="5" rating="secondRate" on-rating="onItemRating(rating)" required></jk-rating-stars>
+            </div>
+            <div class="form-group">
+               <textarea name="review" ng-model="giveReview.description" placeholder="Your review *" required></textarea>
+            </div>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button type="button" ng-disabled="reviewForm.$invalid" class="btn btn-primary" ng-click="submitReview(giveReview)">Submit</button>
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       </div>
+     </div>     
+   </div>
+ </div>

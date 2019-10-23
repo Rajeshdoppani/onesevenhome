@@ -1,0 +1,106 @@
+<section class="top" id="top-header">
+   <div class="container">
+      <div class="row">
+         <div class="col-xs-12 col-sm-6 shipping-text"> Free Shipping on Orders <i class="fa fa-rupee"></i> 5000 and Above </div>
+         <div class="col-xs-12 col-sm-6 links">
+            <a href="#contact" class="right-links">Contact Us</a> <span ng-hide="userlogged"><a href="#/login" class="right-links">Login </a> <a href="#/registration"> Signup</a></span><span class="login-btn" ng-show="userlogged">{{loggedInUserName}}</span>
+            <div class="myprofile-block">
+               <div class="mypro-brdr">
+                  <div class="pro-top">
+                     <div class="pro-txt">
+                        <h3>{{loggedInUserName}}</h3>
+                        <h4>{{loggedInUser}}</h4>
+                     </div>
+                  </div>
+                  <div class="pro-btm">
+                     <span class="mypro-btn" ng-click="myProfile()"><a>My profile</a></span>
+                     <span class="mypro-logout" ng-click="logout()"><a>Log Out</a></span>
+                  </div>
+               </div>
+            </div>
+            <a href="#cart" class="cart">
+               <img src="img/cart1.png">
+               <span class="cart-value"> {{lengthofcart}}</span>
+            </a>
+         </div>
+      </div>
+   </div>
+
+</section>
+<header class="header">
+   <header-Directive></header-Directive>
+   <category-Directive></category-Directive>
+</header>
+<div class="container">
+   <section class="login title">
+      <div class="row">
+         <div class="col-xs-12  ">
+            <h2 class="main-title"><strong>Login</strong></h2>
+            <h2 class="sec-title"><strong>New to OneSevenHome? <a href="#registration">Signup</a></strong></h2>
+            <div class="links">
+               <a href="#/login" class="active">User </a>
+               <a href="#/vendorlogin">Vendor</a>
+            </div>
+            <div class="login-inner">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 right">
+                  <h4>Sign in to your account</h4>
+                  <form class="form-horizontal" name="loginForm" novalidate>
+                     <fieldset ng-disabled="isDisabled">
+                        <div class="form-group" ng-class="{ 'has-error' : loginForm.userName.$invalid && !loginForm.userName.$pristine }">
+                           <i class="fa fa-user" aria-hidden="true"></i>
+                           <input type="email" name="userName" id="userName" class="form-control" ng-model="session.userName" placeholder="Email (Your User Id)" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                           <p class="help-block" ng-show="loginForm.userName.$touched && loginForm.userName.$error.required">Email is required</p>
+                           <p class="help-block" ng-show="loginForm.userName.$error.pattern">Invalid Email</p>
+                           <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <div class="form-group">
+                           <i class="fa fa-lock" aria-hidden="true"></i>
+                           <input type="password" name="password" class="form-control" ng-model="session.password" placeholder="Password" required>
+                           <p ng-show="loginForm.password.$touched && loginForm.password.$error.required" class="help-block">Password is required</p>
+                           <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <div class="form-group">
+                           <input type="checkbox" name="remember" id="rem" value=""><label class="rem" for="rem">Remember Me</label>
+                           <p class="fpwd"><a href="#forgetpassword">Forgot your password?</a></p>
+                        </div>
+                        <div class="form-group btn-sign">
+                           <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid" value="Login" title="Login" ng-click="redirect(session)">
+                           <span>Login</span> </button>
+                        </div>
+                     </fieldset>
+                  </form>
+               </div>
+            </div>
+            <div class="alert alert-warning col-md-6 col-md-offset-3" ng-if="errmsg">
+               <span class="close" data-dismiss="alert" aria-label="close" ng-click="alerthide()">&times;</span>
+               <strong>Error! </strong>{{errmessage}}</div>
+         </div>
+      </div>
+
+      <!-- Account Activation Confirmation Modal -->
+      <div class="modal fade accountActivatedModal" id="successModal" tabindex="-1" role="dialog">
+         <div class="modal-dialog  modal-sm" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Success</h4>
+               </div>
+               <div class="modal-body">
+                  <p><i class="fa fa-check fa-3x"></i><span>{{successMessage}}</span></p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div id="back-top">
+      <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-circle-o-up"></i></a>
+   </div>
+</div>
+<script>
+   $(".mobile-search .fa-search").click(function () {
+      $(".mobile-search input").toggle();
+   });
+</script>

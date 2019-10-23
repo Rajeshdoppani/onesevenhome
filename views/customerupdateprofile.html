@@ -1,0 +1,162 @@
+<section class="login mid acc-profile">
+         <form name="regForm" novalidate>
+            <div class="home-top">
+               <h5>Edit Profile</h5>
+            </div>
+            <section class="login mid registration">
+               <div class="login-mid-block">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left">
+                     <h4>Personal Information</h4>
+                     <div class="form-group">
+                        <input type="text" name="firstName" class="form-control" ng-model="userprofile.firstName"
+                           placeholder="First Name" readonly>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" name="lastName" class="form-control" ng-model="userprofile.lastName"
+                           placeholder="Last Name" readonly>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                     </div>
+                     <div class="form-group reg-date">
+                        <div class="input-group date" data-provide="datepicker" data-date-end-date="0d">
+                           <input type="text" class="form-control" ng-model="userprofile.dob" placeholder="DOB (DD/MM/YYYY)">
+                           <div class="input-group-addon">
+                              <span class="glyphicon glyphicon-th"></span>
+                           </div>
+                        </div>
+                        <!--<i class="fa fa-star" aria-hidden="true"></i>-->
+                     </div>
+                     <div class="form-group">
+                        <input type="text" class="form-control tin_box" name="phone" ng-model="userprofile.phone" id="phone"
+                           placeholder="Mobile Number" name="phone" ng-pattern="/^[0-9]{1,10}$/" maxlength="10"
+                           required>
+                        <p ng-show="regForm.phone.$touched && regForm.phone.$invalid" class="help-block">phone Number
+                           is required</p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                     </div>
+                     <div class="form-group gender">
+                        Gender
+                        <div class="radio-item">
+                           <input type="radio" name="gender" ng-model="userprofile.gender" value="M" id="male" required>
+                           <label for="male">Male</label>
+                        </div>
+                        <div class="radio-item">
+                           <input type="radio" name="gender" ng-model="userprofile.gender" value="F" id="female"
+                              required>
+                           <label for="female">Female</label>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control" ng-model="userprofile.email"
+                           placeholder="Email (Your User Id)" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                           readonly>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 right">
+                     <h4>Contact Information</h4>
+                     <div class="form-group">
+                        <textarea name="address" class="form-control" placeholder="Address" ng-model="userprofile.address "
+                           required></textarea>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <p ng-show="regForm.address.$touched && regForm.address.$invalid" class="help-block">Address is
+                           required</p>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" name="postalCode" class="form-control tin_box" ng-model="userprofile.postalCode"
+                           placeholder="Postal Code" maxlength="6" required>
+                        <p ng-show="regForm.postalCode.$touched && regForm.postalCode.$invalid" class="help-block">Postal
+                           Code is required</p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                     </div>
+                     <div class="form-group">
+                        <div class="sec-block">
+                           <select id="state" ng-model="userprofile.state" required>
+                              <option value="">Select State</option>
+                              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                              <option value="Andhra Pradesh">Andhra Pradesh</option>
+                              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                              <option value="Assam">Assam</option>
+                              <option value="Bihar">Bihar</option>
+                              <option value="Chandigarh">Chandigarh</option>
+                              <option value="Chhattisgarh">Chhattisgarh</option>
+                              <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                              <option value="Daman and Diu">Daman and Diu</option>
+                              <option value="Delhi">Delhi</option>
+                              <option value="Goa">Goa</option>
+                              <option value="Gujarat">Gujarat</option>
+                              <option value="Haryana">Haryana</option>
+                              <option value="Himachal Pradesh">Himachal Pradesh</option>
+                              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                              <option value="Jharkhand">Jharkhand</option>
+                              <option value="Karnataka">Karnataka</option>
+                              <option value="Kenmore">Kenmore</option>
+                              <option value="Kerala">Kerala</option>
+                              <option value="Lakshadweep">Lakshadweep</option>
+                              <option value="Madhya Pradesh">Madhya Pradesh</option>
+                              <option value="Maharashtra">Maharashtra</option>
+                              <option value="Manipur">Manipur</option>
+                              <option value="Meghalaya">Meghalaya</option>
+                              <option value="Mizoram">Mizoram</option>
+                              <option value="Nagaland">Nagaland</option>
+                              <option value="Narora">Narora</option>
+                              <option value="Natwar">Natwar</option>
+                              <option value="Odisha">Odisha</option>
+                              <option value="Paschim">Paschim Medinipur</option>
+                              <option value="Pondicherry">Pondicherry</option>
+                              <option value="Punjab">Punjab</option>
+                              <option value="Rajasthan">Rajasthan</option>
+                              <option value="Sikkim">Sikkim</option>
+                              <option value="Tamil Nadu">Tamil Nadu</option>
+                              <option value="Telangana">Telangana</option>
+                              <option value="Tripura">Tripura</option>
+                              <option value="Uttar Pradesh">Uttar Pradesh</option>
+                              <option value="Uttarakhand">Uttarakhand</option>
+                              <option value="Vaishali">Vaishali</option>
+                              <option value="West Bengal">West Bengal</option>
+                           </select>
+                        </div>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <p id="id2" class="help-block"></p>
+                     </div>
+                     <!--  <div class="form-group">
+                                    <div class="sec-block">
+                                       <select id="city" ng-model="userprofile.city" required>
+                                          <option value="">Select City</option>
+                                          <option value="Hyderabad">Hyderabad</option>
+                                          <option value="Amaravathi">Amaravathi</option>
+                                          <option value="Banglore">Banglore</option>
+                                          <option value="Chennai">Chennai</option>
+                                       </select>
+                                    </div>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <p id="id3" class="help-block"></p>
+                                    </div>-->
+                     <!--CIty-->
+                     <div class="form-group" ng-class="{ 'has-error' : regForm.city.$invalid && !regForm.city.$pristine }">
+                        <input type="text" id="F" name="city" class="form-control" ng-model="userprofile.city"
+                           placeholder="city " required>
+                        <p ng-show="regForm.city.$touched && regForm.city.$invalid" class="help-block">city is required</p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                     </div>
+                     <!-- Area-->
+                     <div class="form-group" ng-class="{ 'has-error' : regForm.area.$invalid && !regForm.area.$pristine }">
+                        <input type="text" name="area" class="form-control area" ng-model="userprofile.area"
+                           placeholder="Area" id="m" required>
+                        <p ng-show="regForm.area.$touched && regForm.area.$invalid" class="help-block">Area is required</p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                     </div>
+                  </div>
+                  <div class="form-group reg-btn">
+                     <button type="submit" class="btn btn-primary" ng-disabled="regForm.$invalid"  
+                        ng-click="Update(userprofile)"><span>Update</span> </button>
+                  </div>
+                  <div class="clearfix"></div>
+                  <!-- <div class="alert alert-warning " ng-if="errmsg"> -->
+                     <!-- <span class="close" data-dismiss="alert" aria-label="close" ng-click="alerthide()">&times;</span> -->
+                     <!-- <strong> </strong>{{errmessage}} -->
+                  <!-- </div> -->
+         </form>
+   </div>
+   </section>
+   </section>

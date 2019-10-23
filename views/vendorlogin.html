@@ -1,0 +1,100 @@
+<section class="top" id="top-header">
+      <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 shipping-text"> Free Shipping on Orders <i class="fa fa-rupee"></i> 5000 and Above </div>
+            <div class="col-xs-12 col-sm-6 links">
+               <a href="#contact" class="right-links">Contact Us</a> <span ng-hide="userlogged"><a href="#/login" class="right-links">Login </a>  <a href="#/registration" > Signup</a></span><span class="login-btn" ng-show="userlogged">{{loggedInUserName}}</span>
+               <!--=== LOGOUT SECTION ===-->
+               <div class="myprofile-block">
+                  <div class="mypro-brdr">
+                     <div class="pro-top">
+                        <!--<a href="#" class="pro-pic">
+                           <img src="img/tst-pic.jpg"/>
+                           <span>Change</span>
+                           </a>-->
+                        <div class="pro-txt">
+                           <h3>{{loggedInUserName}}</h3>
+                           <h4>{{loggedInUser}}</h4>
+                        </div>
+                     </div>
+                     <div class="pro-btm">
+                        <span class="mypro-btn" ng-click="myProfile()"><a>My profile</a></span>
+                        <span class="mypro-logout" ng-click="logout()"><a>Log Out</a></span>
+                     </div>
+                  </div>
+               </div>
+               <a href="#cart" class="cart">
+                  <!--<i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> -->
+                  <img src="img/cart1.png">
+                  <span class="cart-value"> {{lengthofcart}}</span> 
+               </a>
+            </div>
+         </div>
+      </div>
+	
+   </section>
+   <header class="header">
+     <header-Directive></header-Directive>
+      <category-Directive></category-Directive>
+   </header>
+<div class="container">
+   <section class="login title" >
+      <div class="row">
+         <div class="col-xs-12  ">
+            <h2 class="main-title"><strong>Login</strong></h2>
+            <h2 class="sec-title"><strong>New to OneSevenHome?  <a href="#registration">Signup</a></strong></h2>
+            <div class="links">
+               <a href="#/login">User </a> 
+               <a href="#/vendorlogin" class="active">Vendor</a>
+			   
+            </div>
+            <div class="login-inner">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 right">
+                  <h4>Sign in to your account</h4>
+                  <form class="form-horizontal" name="vendorloginForm" ng-submit="vendorlog(vlogin)">
+                     <fieldset ng-disabled="isDisabled">
+					 <div class="form-group">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <div ng-class="{ 'has-error' : vendorloginForm.userName.$invalid && !vendorloginForm.userName.$pristine }">
+                           <i class="fa fa-user" aria-hidden="true"></i>
+                           <input type="email" name="userName" id="email" class="form-control" ng-model="vlogin.userName" placeholder="Email (Your User Id)" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                           <p class="help-block" ng-show="vendorloginForm.userName.$touched && vendorloginForm.userName.$error.required">Enter your Email</p>
+						   <p class="help-block" ng-show="vendorloginForm.userName.$error.pattern">Invalid Email</p>
+                           <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                           <i class="fa fa-lock" aria-hidden="true"></i>
+                           <div ng-class="{ 'has-error' : vendorloginForm.password.$invalid && !vendorloginForm.password.$pristine }">
+                              <input type="password" name="password" class="form-control" ng-model="vlogin.password" placeholder="Password" required>
+							  <p class="help-block" ng-show="vendorloginForm.password.$touched && vendorloginForm.password.$error.required">Enter your Password</p>
+							  
+							  <i class="fa fa-star" aria-hidden="true"></i>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <input type="checkbox" name="remember" id="rem" value=""><label class="rem" for="rem">Remember Me</label>
+                           <p class="fpwd"><a href="#forgetpassword">Forgot your password?</a></p>
+                        </div>
+                        <div class="form-group btn-sign">
+                           <button type="submit" class="btn btn-primary" ng-disabled="vendorloginForm.$invalid"  value="Login" title="Login" ng-click="vendorlog(vlogin)">
+                           <span>Login</span> </button>
+                        </div>
+                     </div>
+					 </fieldset>
+                  </form>
+               </div>
+               
+			   <div class="alert alert-warning col-md-6 col-md-offset-3" ng-if="errmsg"> 
+			   <span class="close" data-dismiss="alert" aria-label="close" ng-click="alerthide()">&times;</span>
+			   <strong>Error! </strong>{{errmessage}}</div>
+            </div>
+         </div>
+   </section>
+   </div>
+	</div>
+   <script>
+     $(".mobile-search .fa-search").click(function(){
+	$(".mobile-search input").toggle();
+});
+   </script>

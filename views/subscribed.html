@@ -1,0 +1,65 @@
+<div class="wrap">
+   <!-- Static navbar -->
+<section class="top" id="top-header">
+    <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 shipping-text"> Free Shipping on Orders <i class="fa fa-rupee"></i> 5000 and Above </div>
+            <div class="col-xs-12 col-sm-6 links">
+               <a href="#contact" class="right-links">Contact Us</a> <span ng-hide="userlogged"><a href="#/login" class="right-links">Login </a>  <a href="#/registration" > Signup</a></span><span class="login-btn" ng-show="userlogged">{{loggedInUserName}}</span>
+               <!--=== LOGOUT SECTION ===-->
+               <div class="myprofile-block">
+                  <div class="mypro-brdr">
+                     <div class="pro-top">
+                        <!--<a href="#" class="pro-pic">
+                           <img src="img/tst-pic.jpg"/>
+                           <span>Change</span>
+                           </a>-->
+                        <div class="pro-txt">
+                           <h3>{{loggedInUserName}}</h3>
+                           <h4>{{loggedInUser}}</h4>
+                        </div>
+                     </div>
+                     <div class="pro-btm">
+                        <span class="mypro-btn" ng-click="myProfile()"><a>My profile</a></span>
+                        <span class="mypro-logout" ng-click="logout()"><a>Log Out</a></span>
+                     </div>
+                  </div>
+               </div>
+               <a href="#cart" class="cart">
+                  <!--<i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> -->
+                  <img src="img/cart1.png">
+                  <span class="cart-value"> {{lengthofcart}}</span> 
+               </a>
+            </div>
+         </div>
+      </div>
+	
+   </section>
+   <header class="header">
+     <header-Directive></header-Directive>
+      <category-Directive></category-Directive>
+   </header>
+   <div class="container">
+	<section class="contact-address" >
+	<div class="container">
+	 <div class="row">
+      <div class="col-xs-12  ">
+         <h2 class="sec-title mar0"><strong>Subscription</strong></h2>
+		 <div class="address-area">
+<h4 style= "text-align: center";> Greetings from OneSevenHome</h4>
+
+<h5 style= "text-align: center";>{{message}}</h5>
+  <div  style= "text-align: center";>   <a href="#/dashboard" ><b>Home </b></a>/ <a href="#/login" ><b>Login</b></a><span>
+        </div>
+
+      </div>
+   </div>
+</div>
+</section>
+</div>
+
+<script>
+$(".mobile-search .fa-search").click(function(){
+	$(".mobile-search input").toggle();
+});
+</script>

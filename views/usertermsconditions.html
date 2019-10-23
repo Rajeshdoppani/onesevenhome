@@ -1,0 +1,742 @@
+<div class="wrap">
+	<section class="top" id="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 shipping-text"> Free Shipping on Orders <i class="fa fa-rupee"></i> 5000 and Above </div>
+				<div class="col-xs-12 col-sm-6 links">
+					<a href="#contact" class="right-links">Contact Us</a> <span ng-hide="userlogged"><a href="#/login" class="right-links">Login </a> <a href="#/registration"> Signup</a></span><span class="login-btn" ng-show="userlogged">{{loggedInUserName}}</span>
+					<div class="myprofile-block">
+						<div class="mypro-brdr">
+							<div class="pro-top">
+								<div class="pro-txt">
+									<h3>{{loggedInUserName}}</h3>
+									<h4>{{loggedInUser}}</h4>
+								</div>
+							</div>
+							<div class="pro-btm">
+								<span class="mypro-btn" ng-click="myProfile()"><a>My profile</a></span>
+								<span class="mypro-logout" ng-click="logout()"><a>Log Out</a></span>
+							</div>
+						</div>
+					</div>
+					<a href="#cart" class="cart">
+						<img src="img/cart1.png">
+						<span class="cart-value"> {{lengthofcart}}</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<header class="header">
+		<header-Directive></header-Directive>
+		<category-Directive></category-Directive>
+	</header>
+	<div class="user-agr-terms-con">
+		<div class="panel-group" id="accordion">
+			<p><b>Note! You are concluding a legally binding agreement.</b></p>
+			<p>Welcome to <a href="http://www.onesevenhome.com">http://www.onesevenhome.com</a> (the “<b>Website</b>”). The
+				Website is owned and operated by OSH Heights Private Limited, a company incorporated under the Indian Companies
+				Act, 2013, having its registered office at H. No. 22-4/A, Eenadu Colony, Kukatpally, Hyderabad – 500072,
+				Telangana, India (the “<b>Company</b>”).
+				These terms and conditions of use of the Website (the “<b>Terms and Conditions</b>”) govern your access to and
+				use of the Website and (as and when developed) mobile applications, including but not limited to the Website,
+				that link to or reference these Terms and Conditions. By accessing, viewing, downloading from, or otherwise
+				using the Website, you agree to these Terms and Conditions and conclude a legally binding contract with the
+				Company. We encourage you to read these Terms and Conditions with great care in order to participate with the
+				Company as a User in the access to our quality Websites. By becoming a User, you acknowledge that you have read
+				and understood these Terms and Conditions and that you agree to be bound by all of its provisions. Do not access
+				or use the Website if you are unwilling or unable to be bound by the Terms and Conditions.
+				By using the Website, you signify your agreement to these Terms and Conditions, whether or not you have read the
+				same.</p>
+		
+		<button class="accordion">1. DEFINITIONS</button>
+		<div class="panel">
+			<h2>PARTIES</h2>
+			<p>"<b>you</b>" and "<b>your</b>" refer to you, as a user of the Website. A "<b>User</b>" is someone who
+				accesses, browses, shops, adds information, creates an account, crawls, scrapes, or in any way uses the
+				Website. "<b>We</b>", "<b>us</b>", "<b>our</b>" refer to the Company. If you are using the Website on
+				behalf of a company or other legal entity, such entity may have a separate agreement with us, but You are
+				nevertheless individually bound by these Terms and Conditions. If you do not want to become a user and do
+				not conclude this Agreement, do NOT click “<a href="http://www.onesevenhome.com">http://www.onesevenhome.com</a>” and do NOT access, view, download or
+				otherwise use any of the Website’s web pages, information and/or other Websites.</p>
+			<h2>CONTENT</h2>
+			<p>"<b>Content</b>" means any and all materials on the Website including text, images, illustrations,
+				designs, icons, photographs, programs, audio, music, video, downloads and all other forms of data or
+				communication. "<b>Your Content</b>” means Content that you create, submit or transmit to, through, or in
+				connection with the Website, such as videos, commentary, ratings, reviews, invitations, messages, and
+				information that you publicly display or displayed privately in your account profile. “<b>User
+					Content</b>” means Content that users submit or transmit to, through, or in connection with the Website.
+				"Our Content" means Content that the Company creates and makes available in connection with the Website.
+				"<b>Third Party Content</b>" means Content that originates from parties other than us or our users, which
+				is made available on the Website. "<b>Website Content</b>" means all of the Content that is made available
+				on the Website, including Your Content, User Content, Third Party Content, and Our Content.</p>
+		</div>
+
+		<button class="accordion">2. CHANGES TO THE TERMS OF SERVICE</button>
+		<div class="panel">
+			<p>The Company reserves the right to make changes to these Terms and Conditions as the Company deems
+				appropriate from time to time and at any time, without notice and in the Company’s sole discretion. When
+				changes are made, we will notify you by making the revised version available on this webpage, and will
+				indicate at the top of this page the date that revisions were last made.
+				You should revisit these Terms and Conditions on a regular basis as revised versions will be binding on
+				you. Any such modification will be effective immediately upon our posting of
+				new Terms and Conditions. <b>You agree that your continued access to or use of the Website after any
+					posted modifications to the Terms and Conditions indicates your acceptance of the respective
+					modifications.</b></p>
+		</div>
+
+		<button class="accordion">3. BUSINESS MODEL</button>
+		<div class="panel">
+			<p>The Company, through the Website, is an agent of each seller on the Website with respect to the said
+				seller’s product(s) and/or service(s) sold to you via the Website.</p>
+		</div>
+
+		<button class="accordion">4. USING THE SERVICE</button>
+		<div class="panel">
+			<ol>
+				<li>
+					<h3>ELIGIBILITY</h3>
+					<p>Only persons ‘competent to contract’ as per applicable law are eligible to use the Website. However,
+						parents or legal guardians may transact on behalf of minors i.e., persons below the age of 18 years.
+						You may not access or use the Website if you are a competitor of the Company or if we have previously
+						banned you from the Website. You represent to us that you have full power and authority to use the
+						Website as per these Terms and Conditions, and in doing so will not violate any other agreement to
+						which you are a party. In addition, you must provide all equipment and software necessary to connect
+						to the Website, including mobile handsets, tablet computers and/or other suitable devices where
+						applicable.</p>
+				</li>
+				<li>
+					<h3>PERMISSION TO USE THE SERVICE</h3>
+					<p>We grant you permission to use the Website subject to the restrictions in these Terms and Conditions.
+						Your use of the Website is at your own risk, including the risk that you might be exposed to Content
+						that is offensive, indecent, inaccurate, objectionable, or otherwise inappropriate.</p>
+				</li>
+				<li>
+					<h3>SITE AVAILABILITY</h3>
+					<p>The Website or any functions or Content of the Website may be modified, updated, interrupted,
+						suspended or discontinued at any time without notice to you and/or liability to us.</p>
+				</li>
+				<li>
+					<h3>USER ACCOUNTS</h3>
+					<p>You must create an account (<a href="http://onesevenhome.com/#/registration">Rigister now</a>) and provide certain
+						information about yourself in order to use the features that are offered through the Website . The
+						information you provide as above will be governed by the Privacy Policy available at
+						<a href="http://onesevenhome.com">onesevenhome.com</a> . You are responsible for maintaining the confidentiality of the login credentials
+						of your account. You are also responsible for all activities that occur in connection with your
+						account. You agree to notify us immediately of any unauthorized use of your account. We reserve the
+						right to terminate your account at any time at our discretion. In the context of creating an account,
+						you agree to provide complete and accurate information about yourself. You represent and agree that
+						all information you provide in creating an account and/or placing orders for products and/or services
+						through the Website is truthful and accurate. By confirming your purchase at the end of the checkout
+						process on the Website, you agree to accept and pay for the products and services you have ordered
+						(whether payment is to be made online to the Company, or directly to the seller(s) of the respective
+						product(s) and/or service(s)). You shall not: (i) impersonate any third party, (ii) create or use an
+						account for anyone other than yourself, (iii) provide an email address other than your own, and/or
+						(iv) create multiple accounts. If you use a pseudonym, please note that others may still be able to
+						identify you if, for example, you include identifying information in your reviews, use the same
+						account information on other sites, or allow other sites to share information about you with the
+						Website. If and when you become a User, you consent to the use of: (a) electronic means to complete
+						these Terms and Conditions, and to provide you with any notices given pursuant to these terms &
+						conditions as per these Terms and Conditions and (b) electronic records to store information related
+						to these Terms and Conditions or your use of the Website.</p>
+				</li>
+				<li>
+					<h3>COMMUNICATIONS FROM THE COMPANY AND OTHER USERS</h3>
+					<p>By creating an account, you agree to receive certain communications in connection with the Website.
+						For example, you might receive comments or questions from other Users.
+						You may also receive our regular e-mail newsletter about products, services, offers and promotions,
+						Website updates and/or other matters that may interest you.
+						You agree that all agreements, notices, disclosures and other communications that we provide to you
+						electronically satisfy any legal requirement that such communications be
+						in writing.<br>
+						The Website will not be responsible for any content, including but not limited to comments, reviews,
+						quotes, articles, blogs, deemed as derogatory by you. In the event of you
+						finding any content as offensive, please report the issue at <a href="mailto:info@onesevenhome.com" class="ng-binding">info@onesevenhome.com</a> and the
+						Website will take the required action if found appropriate.</p>
+				</li>
+				<li>
+					<h3>PRODUCT/SERVICE DESCRIPTION</h3>
+					<p>The Company attempts to be as accurate as possible in respect of description of products and services
+						on the Website. However, we do not warrant that the product descriptions, service descriptions and/or
+						other Content of the Website, including but not limited to product/service classification, is
+						accurate, complete, reliable, current, or error-free in any manner. The pictures of products and
+						services are indicative and may not match the actual products and services respectively. In the event
+						a product and/or service on the Website is listed with an incorrect price or description, we reserve
+						the right to modify the same, and also to cancel any orders placed for the incorrectly priced or
+						described product and/or service. We reserve the right to refuse or cancel any such orders regardless
+						of whether the order has been confirmed and you have been charged. If your card has already been
+						charged for the purchase by the Website and your order is cancelled, we will issue a credit to your
+						credit card account in the amount of the charge. On the other hand, if the seller cancels the order
+						after the order has been confirmed, the Company will assist you in your negotiations with the seller.
+						We apologize for any inconvenience this may cause you.<br> <b>Prices of products and availability of
+							products and services listed on the Website are subject to change without notice.</b></p>
+				</li>
+				<li>
+					<h3>USE OF PRODUCT</h3>
+					<p>The Company is not any manner responsible for the use of the products and services sold on the
+						Website since the Company is only an agent of the respective sellers, and the respective sellers will
+						be responsible to you in respect of use of the products/services to the extent specifically stated,
+						and you should carefully read the individual terms and conditions in relation to the products. </p>
+				</li>
+				<li>
+					<h3>PRODUCT RECOMMENDATION</h3>
+					<p>Any recommendations made to you by the Website during the course of your use of the same are purely
+						for informational purposes and for your convenience, and the Company and/or the Website cannot be held
+						responsible for the same in any manner. </p>
+				</li>
+			</ol>
+		</div>
+
+		<button class="accordion">5. CONTENT</button>
+		<div class="panel">
+			<ol>
+				<li>
+					<h3>RESPONSIBILITY FOR ‘YOUR CONTENT’</h3>
+					<p>You alone are responsible for Your Content, and once published, it cannot always be withdrawn . You
+						assume all risks associated with Your Content, including anyone's reliance on its quality, accuracy,
+						or reliability, or any disclosure by you of information in Your Content that makes you personally
+						identifiable. You represent that you own, or have the necessary permissions to use and authorize the
+						use of Your Content as described herein. You shall not imply that Your Content is in any way sponsored
+						or endorsed by the Company.
+						It is your responsibility to ensure that Your Content does not contain any material that is (i) false,
+						intentionally misleading, or defamatory; (ii) violates any third-party right, including any copyright,
+						trademark, patent, trade secret, moral right, privacy right, right of publicity, or any other
+						intellectual property or proprietary right; (iii) unlawful/illegal, including but not limited to hate
+						speech or pornography; (iv) exploitative or otherwise harmful to minors; and/or (v) violative of, or
+						advocates the violation of any law or regulation. You may expose yourself to liability if, for
+						example, Your Content contains material that falls in any one or more of the above categories or
+						others that are prohibited by law. You hereby indemnify the Company and the Website from any and all
+						liability in this regard.
+					</p>
+				</li>
+
+				<li>
+					<h3>OUR RIGHT TO USE YOUR CONTENT</h3>
+					<p>You do not have to submit any of Your Content to us. If you do submit Your Content to us, we may use
+						Your Content in a number of different ways, including publicly displaying it, reformatting it,
+						incorporating it into advertisements and other works, creating derivative works from it, promoting it,
+						and distributing it, and allowing others to do the same in connection with their own websites and
+						other media platforms ("Other Media"). As such, you hereby irrevocably grant us world-wide,
+						non-exclusive, royalty-free, sublicensable, transferable rights to use Your Content for any purpose
+						whatsoever. You also irrevocably grant the other users of the Website and any Other Media the right to
+						access Your Content in connection with their use of the Website and any Other Media. By submitting
+						Your Content to us, you represent and warrant that such submission is accurate, is not confidential,
+						and is not in violation of any contractual restrictions or other third party rights. You further agree
+						to inform us in the event that any of Your Content has changed since your submission of the same to
+						the Website and, if appropriate, you agree to make such modifications yourself to your profile and/or
+						any other portion of Your Content. Finally, you irrevocably waive, and cause to be waived, against the
+						Company and its users any claims and assertions of moral rights or attribution with respect to Your
+						Content. By "use" we mean use, copy, publicly perform or display, distribute, modify, translate, and
+						create derivative works of Your Content. You have the right to withdraw the permission granted by you
+						as per this paragraph, by informing us at <a href="mailto:info@onesevenhome.com" class="ng-binding">info@onesevenhome.com</a>. You acknowledge, consent and agree that we may
+						access, preserve, and disclose your registration and any other information you provide if required to
+						do so by law or in a good faith belief that such access preservation or disclosure is reasonably
+						necessary to: (a) comply with legal process; (b) enforce these Terms and Conditions; (c) respond to
+						claims of a violation of the rights of third parties; (d) respond to your requests for customer
+						service; or (e) protect the rights, property, or personal safety of the Website, its affiliates, its
+						Users and the public in general. You are solely responsible for your interactions with other Users.
+						The Website reserves the right, but has no obligation, to monitor disputes between you and other Users
+						and to terminate your account if the Website determines to do so, in its sole discretion.
+					</p>
+				</li>
+
+				<li>
+					<h3>OWNERSHIP</h3>
+					<p>As between you and the Company, you own Your Content. We own Our Content, including but not limited
+						to visual interfaces, interactive features, graphics, design,
+						compilation, computer code, products, software, aggregate user review ratings, and all other elements
+						and components of the Website excluding Your Content, User
+						Content and Third Party Content. We also own the copyrights, trademarks, service marks, trade names,
+						and other intellectual and proprietary rights throughout the
+						world (the “<b>IP Rights</b>”) associated with Our Content and the Website, which may or may not be
+						protected by copyright, trade secrets, patent, trademark laws and all
+						other applicable intellectual and proprietary rights and laws. You may not modify, reproduce,
+						distribute, create derivative works or adaptations of, publicly display
+						or in any way exploit any of the Our Content in whole or in part except as expressly authorized by us.
+						Except as expressly and unambiguously provided herein, we do not
+						grant you any express or implied rights, and all rights in and to the Website and Our Content are
+						retained by us.
+					</p>
+				</li>
+
+				<li>
+					<h3>ADVERTISING</h3>
+					<p>The Company and its licensees may publicly display advertisements and other information adjacent to
+						or included with Your Content. Except as agreed upon through a
+						separate legally binding contract, you are not entitled to any compensation for such advertisements.
+						The manner, mode and extent of such advertising are subject to
+						change by the Company without specific notice to you.
+					</p>
+				</li>
+
+				<li>
+					<h3>OTHER</h3>
+					<p>We reserve the right to remove, screen, edit, or reinstate User Content and Your Content from time to
+						time at our sole discretion and without notice to you.
+						For example, we may remove a review if we believe it violates any of these Terms and Conditions. We
+						have no obligation to retain or provide you with copies of Your
+						Content, nor do we guarantee any confidentiality with respect to Your Content. The Website exercises
+						no control over any of Your Content you submit to the Website.
+						We have no obligation to verify the identity of any users (including you), when they are connected to
+						the Website or to supervise any Content that has been provided
+						by users. Note that we describe our current practices related to personally identifiable information
+						collected through the Website in the Privacy Policy and that we
+						may update the Privacy Policy from time to time at our sole discretion. Should you believe that Your
+						Content is being misused by anyone, you must immediately inform
+						us by email at <a href="mailto:info@onesevenhome.com" class="ng-binding">info@onesevenhome.com</a>.
+					</p>
+				</li>
+			</ol>
+		</div>
+
+		<button class="accordion">6. THIRD PARTIES AND SELF PROMOTION BY USERS</button>
+		<div class="panel">
+			<ol>
+				<li>
+					<h3>LINKS TO THIRD PARTY SITES</h3>
+					<p>The Website may contain links to other sites on the Internet that are owned and operated by third
+						parties. You acknowledge that we are not responsible for the
+						operation of or content located on or through any such sites. Further, other sites have their own
+						privacy policies and data collection practices. If you decide to
+						leave the Website and access third party sites or to use/install any Third Party Content, You do so at
+						Your own risk and You should be aware that this User Agreement,
+						the Privacy Policy and other terms and conditions of the Website no longer govern Your actions. Please
+						consult each site’s privacy policy. We are not responsible for
+						the actions of third parties.
+					</p>
+				</li>
+				<li>
+					<h3>THIRD PARTY PRODUCTS AND SERVICES</h3>
+					<p>Descriptions, images, or references to third-party products and/or services on the Website do not
+						imply our endorsement thereof, and we are not responsible for,
+						and disclaim any endorsement of, any such product and/or service. Posted reviews by a User are solely
+						the opinion of that User and none of such reviews contain or
+						reflect our opinion or views of the Company.
+					</p>
+				</li>
+				<li>
+					<h3>OFFERS AND PROMOTIONS BY THIRD PARTY</h3>
+					<p>The Company does not endorse any third party on the Website, and any offers, promotions or
+						communication disseminated across the Website or to its users/visitors are
+						the sole responsibility of the initiating party. The Company is not responsible for the veracity of
+						the content or for the final delivery quality of any offers,
+						promotion, product and gift hampers given by any third party to visitors/users of the Website or any
+						violation done by such content.
+					</p>
+				</li>
+				<li>
+					<h3>SELF PROMOTION BY USERS</h3>
+					<p>The Company does not endorse any User on the Website, including but not restricted to bloggers,
+						writers, brands, product manufacturers, and website providers.
+						Any offers, promotions or communication, including but not restricted to product reviews, product
+						recommendation, services recommendation and services offering,
+						disseminated by such Users across the Website or to its users/visitors are the sole responsibility of
+						the initiating party, and you agree not to hold the Company
+						responsible in any manner for any aspects attributable to any User.
+					</p>
+				</li>
+			</ol>
+		</div>
+
+		<button class="accordion">7. GUIDELINES AND POLICIES</button>
+		<div class="panel">
+			<ol>
+				<li>
+					<h3>CANCELLATIONS AND RETURNS</h3>
+					<p>The Company normally provides a 7 days’ free return policy on a product purchased on the Website,
+						provided that the product is in an unused condition and the
+						same as supplied by the Company to you. Upon receipt by the Company of the product as above, and
+						confirmed in the same condition by the Company,
+						we will refund/reverse the purchase price to you within fifteen (15) days therefrom. Please refer to
+						our ‘Cancellation & Returns Policy’ available at <a href="http://onesevenhome.com/#/usertermsconditions">http://onesevenhome.com/#/usertermsconditions</a>.
+					</p>
+				</li>
+				<li>
+					<h3>SHIPPING AND DELIVERY</h3>
+					<p>Any and all shipping of our products/services to our Users, in cases where the User has the option to
+						have them shipped by us and has selected the same,
+						is currently handled via ________________ , and may be updated from time to time. Please refer to our
+						Shipping Policy available at ________ ___. Please note that
+						the Shipping Policy is not applicable in cases where you pick up the products/services yourself or by
+						means arranged by you.
+					</p>
+				</li>
+				<li>
+					<h3>PRIVACY</h3>
+					<p>You represent that you have read, understood and agree to our Privacy Policy available at <a href="http://onesevenhome.com/#/usertermsconditions">http://onesevenhome.com/#/usertermsconditions</a>.
+					</p>
+				</li>
+			</ol>
+		</div>
+		<button class="accordion">8. REPRESENTATIONS</button>
+		<div class="panel">
+			<p>You agree to and hereby make the following representations: </p>
+			<ol class="you-agree-sec">
+				<li>
+					<h3>You will use the services of the Website for lawful purposes only and will comply with all
+						applicable laws and regulations while transacting on the Website. </h3>
+				</li>
+				<li>
+					<h3>You will provide authentic and true information in all instances where such information is requested
+						of you. We reserve the right to confirm and
+						validate the information and other details provided by you at any point of time. If upon confirmation
+						your details are found not to be true (wholly or partially),
+						the Company has the right in its sole discretion to debar you from using the Website. </h3>
+				</li>
+				<li>
+					<h3>Where credit/debit card details are required, you will provide correct information. You will only
+						use a credit/debit card that you own in your
+						transactions with the Company. Any and all liability for use by you of a card fraudulently is
+						exclusively on you, and will lead to claims of cost of goods,
+						collection costs, legal fees etc.</h3>
+				</li>
+				<li>
+					<h3>You are accessing the products and/or services available on the Website and transacting at your sole
+						risk and are using your best and prudent judgment before
+						entering into any transaction on the Website.</h3>
+				</li>
+				<li>
+					<h3>In cases where the User has the option to have products and/or services shipped by us and you have
+						selected the same, the address at which delivery of the
+						product(s)/service(s) ordered by you is to be made will be correct and proper in all respects, and the
+						shipment will be made to this address only and no other address.
+						Any deviation from this requirement, if agreed to by us in your sole discretion, may lead to
+						additional costs for which you will be solely responsible.
+						In case of incorrect shipping address, you will be liable for any and all costs incurred towards
+						shipping the products and/or services to such incorrect address,
+						including shipping costs, return shipping costs and other related costs, damages etc.</h3>
+				</li>
+				<li>
+					<h3>Before placing an order, you undertake to check the product/service description carefully. By
+						placing an order for a product and/or service, you agree to be
+						bound by the conditions of sale included in the description of the respective product(s) and/or
+						service(s).</h3>
+				</li>
+			</ol>
+		</div>
+		<button class="accordion">9. INTELLECTUAL PROPERTY RIGHTS</button>
+		<div class="panel">
+			<p>The Company and its suppliers and licensors expressly reserve all intellectual property rights, including
+				but not limited to copyright, trademark and patent rights (to the extent applicable) in Our Content, which
+				includes but is not limited to all text, programs, products, processes, technology, content, data,
+				software and other materials which appear on the Website and all other websites and/or mobile applications
+				owned/operated by the Company. The compilation (meaning the collection, arrangement and assembly) of the
+				Content on the Website is the exclusive property of the Company. Access to the Website does not confer and
+				shall not be considered as conferring upon you or anyone else any license under any of the Company’s
+				intellectual property rights and/or third party intellectual property rights. All rights, including
+				copyright, in the Website are owned by or licensed to the Company. Any use of the Website and/or its
+				Content, including copying or storing any information in whole or part, other than for your own personal,
+				non-commercial use is prohibited without the permission of the Company. Any reproduction for purposes
+				other than those permitted above, and any modification, distribution, republishing, transmission, display
+				or performance without the prior written permission the Company is strictly prohibited.
+				The ‘ONESEVENHOME’ name and ‘<img style="width: 110px;" src="img/logo.png">’ logo of the Company and all related product and service names,
+				design marks and slogans are the trademarks or trade names or service marks of the Company. All other
+				marks provided on the Website are the property of their respective owners. No trademark or service mark
+				license is granted in connection with the materials contained on the Website. Access to the Website does
+				not authorize anyone to use any name, logo or mark in any manner.
+				All Content that is not Your Content is intended solely for personal, non-commercial use only. ANY
+				COMMERCIAL USE OF ANY CONTENT ON THE WEBSITE OTHER THAN YOUR CONTENT WILL NEED PRIOR EXPRESS WRITTEN
+				PERMISSION FROM THE COMPANY OR THE RESPECTIVE OWNER OF THE CONTENT, AS THE CASE MAY BE. No right, title or
+				interest in any downloaded materials or software is transferred to you as a result of any downloading or
+				copying by you of the Content from the Website. You may not reproduce (except as noted above for personal,
+				non-commercial use), publish, transmit, distribute, display, modify, create derivative works from, sell or
+				participate in any sale of or exploit in any way, in whole or in part, any of the Content, the Website or
+				any related software. All software used on the Website is the property of the Company or its suppliers and
+				protected by international copyright laws. The compilation (meaning the collection, arrangement, and
+				assembly) of all Content on the Website is the exclusive property of the Company and is also protected by
+				international intellectual property laws.
+			</p>
+		</div>
+
+		<button class="accordion">10. RESTRICTIONS</button>
+		<div class="panel">
+			<p>We are under no obligation to enforce the terms of use of the Website on your behalf against another
+				User. While we encourage you to let us know if you believe another User has violated the terms of usage of
+				the Website, we reserve the right to investigate and take appropriate action at our sole discretion. In
+				addition:</p>
+			<ol class="you-agree-sec">
+				<li>
+					<h3>YOU AGREE NOT TO, AND WILL NOT ASSIST OR ENABLE OTHERS TO USE THE WEBSITE TO:</h3>
+					<ol class="lower-roman">
+						<li>violate any terms of usage of the Website;</li>
+						<li>violate any third party's rights, including any breach of confidence, copyright, trademark,
+							patent, trade secret, moral right, privacy right,
+							right of publicity, or any other intellectual property or proprietary right;
+						</li>
+						<li>threaten, stalk, harm, or harass others, or promote bigotry or discrimination;</li>
+						<li>promote a business or other commercial venture or event, or otherwise use the Website for
+							commercial purposes, except as expressly permitted by the Company;</li>
+						<li>send bulk emails, surveys, or other mass messaging, whether commercial in nature or not; engage in
+							keyword spamming, or otherwise attempt to manipulate the
+							Website's search results or any third party website;</li>
+						<li>Solicit personal information from minors, or submit or transmit pornography; and/or</li>
+						<li>violate any applicable law.</li>
+					</ol>
+				</li>
+				<li>
+					<h3>YOU ALSO AGREE NOT TO, AND WILL NOT ASSIST OR ENABLE OTHERS TO:</h3>
+					<ol class="lower-roman">
+						<li>modify, adapt, appropriate, reproduce, distribute, translate, create derivative works or
+							adaptations of, publicly display, sell, trade, or in any way exploit the Website or the Content
+							(other than Your Content), except as expressly authorized by the Company;</li>
+						<li>ii. use any robot, spider, site search/retrieval application, or other automated device, process
+							or means to access, retrieve, scrape, or index any portion of the Website or any Content;
+						</li>
+						<li>reverse engineer any portion of the Website;</li>
+						<li>remove or modify any copyright, trademark or other proprietary rights notice that appears on any
+							portion of the Website or on any materials printed or copied from the Website;</li>
+						<li>record, process, or mine information about other users;</li>
+						<li>access, retrieve or index any portion of the Website for purposes of constructing or populating a
+							searchable database of business reviews;</li>
+						<li>reformat or frame any portion of the Website;</li>
+						<li>take any action that imposes, or may impose, in our sole discretion, an unreasonable or
+							disproportionately large load on the Company’s technology
+							infrastructure or otherwise make excessive traffic demands of the Website;</li>
+						<li>attempt to gain unauthorized access to the Website, user accounts, computer systems or networks
+							connected to the Website through hacking, password mining
+							or any other means;</li>
+						<li>use the Website or any Content to transmit any computer viruses, worms, defects, trojan horses or
+							other items of a destructive nature (collectively, “<b>Viruses</b>”);</li>
+						<li>use any device, software or routine that interferes with the proper working of the Website, or
+							otherwise attempt to interfere with the proper working of the Website;</li>
+						<li>use the Website to violate the security of any computer network, crack passwords or security
+							encryption codes; disrupt or interfere with the security of, or otherwise cause harm to,
+							the Website or Website Content; or</li>
+						<li>remove, circumvent, disable, damage or otherwise interfere with any security-related features of
+							the Website, features that prevent or restrict the use or copying of the Content,
+							or features that enforce limitations on the use of the Website.</li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+
+		<button class="accordion">11. INDEMNITY</button>
+		<div class="panel">
+			<p>You agree to indemnify and hold the Company, the Company’s websites and mobile applications, including
+				the Website, the Company’s parent, subsidiaries, affiliates,
+				any related companies, suppliers, licensors and partners, and the officers, directors, employees, agents
+				and representatives of each of them
+				(collectively, the “Indemnified Parties”) harmless, including from costs, liabilities and legal fees, from
+				any claim or demand made by any third party
+				due to or arising out of (i) your access to the Website or use of the Website, (ii) your violation of
+				these Terms and Conditions, or (iii)
+				the infringement by you, or any third party using your account, of any intellectual property or other
+				right of any person or entity. The Company
+				(on behalf of the Indemnified Parties) reserves the right, at your expense, to assume the exclusive
+				defense and control of any matter for which you are required to
+				indemnify the Indemnified Parties and you agree to cooperate with our defense of these claims and be
+				liable for all costs arising therefrom. You agree not to settle
+				any matter without the prior written consent of the Company. The Company will use reasonable efforts to
+				notify you of any such claim, action
+				or proceeding upon becoming aware of it.</p>
+		</div>
+
+		<button class="accordion">12. GOVERNING LAW AND JURISDICTION</button>
+		<div class="panel">
+			<p>These Terms and Conditions shall be construed in accordance with the applicable laws of India. In the
+				event any dispute arises out of these Terms and Conditions
+				between You on one hand and the Website, the Company and/or any affiliate of the Website on the other, the
+				parties agree that the same will be subject to the sole
+				and exclusive jurisdiction of the appropriate Courts of Hyderabad, Telangana, India.</p>
+		</div>
+
+		<button class="accordion">13. TERMINATION</button>
+		<div class="panel">
+			<ol class="you-agree-sec">
+				<li>You may terminate the applicability to you of these Terms and Conditions at any time by closing your
+					account and discontinuing your use of the Website,
+					in which case such applicability shall cease as of the time of closing your account, provided that terms
+					hereunder, which by their nature should survive termination,
+					shall continue to be applicable to you. If you close your account, we may continue to display Your
+					Content.
+				</li>
+				<li>We may close your account, suspend your ability to use certain portions of the Website, and/or ban you
+					altogether from the Website for any or no reason,
+					and without notice or liability of any kind. Any such action could prevent you from accessing your
+					account, the Website, Your Content, User Content Our Content,
+					and/or any other related information.</li>
+
+				<li>In the event of any termination, whether by you or us, any and all sections of these Terms and
+					Conditions that by their nature will survive termination,
+					will continue in full force and effect, including our right to continue to use Your Content in
+					accordance with these Terms and Conditions.</li>
+
+				<li>Upon any termination of these Terms and Conditions by either you or the Company, you must promptly
+					destroy all materials downloaded or otherwise obtained from
+					the Website, as well as all copies of such materials, whether made under these Terms of Use or
+					otherwise. Any such termination of the Terms of Use shall not cancel
+					your obligation to pay for any products/services already ordered from the Website or affect any
+					liability that may have arisen under these Terms of Use.</li>
+			</ol>
+		</div>
+
+		<button class="accordion">14. DISCLAIMERS AND LIMITATIONS OF LIABILITY</button>
+		<div class="panel">
+			<p>PLEASE READ THIS SECTION CAREFULLY SINCE IT LIMITS THE LIABILITY OF THE COMPANY AND ITS SUBSIDIARIES,
+				AFFILIATES, AND LICENSORS. EACH OF THE SUBSECTIONS BELOW ONLY APPLIES
+				UP TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW. NOTHING HEREIN IS INTENDED TO LIMIT ANY RIGHTS
+				YOU MAY HAVE WHICH MAY NOT BE LAWFULLY LIMITED.</p>
+			<ol class="you-agree-sec">
+				<li>THE WEBSITE IS MADE AVAILABLE TO YOU ON AN "AS IS" BASIS. ANY INFORMATION WITH RESPECT TO THIRD
+					PARTIES (INCLUDING SELLERS AND THEIR RESPECTIVE PRODUCTS AND/OR SERVICES)
+					CONTAINED ON THE WEBSITE, IS PROVIDED BY THE SAID THIRD PARTIES. YOUR USE OF THE WEBSITE IS AT YOUR OWN
+					DISCRETION AND RISK.
+				</li>
+				<li>TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, WE DISCLAIM ANY AND ALL IMPLIED WARRANTIES AND
+					REPRESENTATIONS, INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES
+					OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NONINFRINGEMENT IN RESPECT OF THE
+					PRODUCTS AND/OR SERVICES SOLD ON THE WEBSITE, AND THE CONTENT ON
+					THE WEBSITE. IF YOU ARE DISSATISFIED OR HARMED BY THE WEBSITE OR ANYTHING RELATED TO THE WEBSITE, YOU
+					MAY LEAVE THE WEBSITE AND TERMINATE THESE TERMS AND CONDITIONS
+					AS PROVIDED HEREIN, AND ANY TERMINATION SHALL BE YOUR SOLE AND EXCLUSIVE REMEDY. SUBJECT TO THE ABOVE,
+					ALL WARRANTIES, IF ANY, RELATING TO THE PRODUCTS AND SERVICES
+					SOLD ON THE WEBSITE ARE PROVIDED BY THE SELLER THEREOF AND NOT BY THE COMPANY. ANY CLAIM IN RELATION TO
+					THE SAME SHOULD BE RAISED AGAINST RESPECTIVE SELLER AND
+					NOT THE COMPANY IN ANY CASE WHATSOEVER.</li>
+				<li>THE WEBSITE MAY ALSO PROVIDE CONTENT FROM OTHER INTERNET SITES OR RESOURCES AND WHILE THE COMPANY
+					TRIES TO ENSURE THAT SUCH CONTENT INCLUDED ON THE WEBSITE IS CORRECT,
+					REPUTABLE AND OF HIGH QUALITY, IT WILL NOT ACCEPT RESPONSIBILITY IF THIS IS NOT THE CASE. THE COMPANY
+					WILL NOT BE RESPONSIBLE FOR ANY ERRORS OR OMISSIONS OR FOR
+					ANY LOSS OR DAMAGE CAUSED BY RELIANCE ON SUCH INFORMATION.</li>
+				<li>WHILE THE COMPANY AIMS TO MAKE THE WEBSITE ACCESSIBLE 24 HOURS PER DAY, 7 DAYS PER WEEK, THE WEBSITE
+					MAY BE UNAVAILABLE FROM TIME TO TIME FOR ANY REASON INCLUDING,
+					WITHOUT LIMITATION, ROUTINE MAINTENANCE. YOU UNDERSTAND AND ACKNOWLEDGE THAT DUE TO CIRCUMSTANCES BOTH
+					WITHIN AND OUTSIDE OF THE CONTROL OF THE COMPANY, ACCESS TO
+					THE WEBSITE MAY BE INTERRUPTED, SUSPENDED OR TERMINATED FROM TIME TO TIME. THE COMPANY SHALL HAVE THE
+					RIGHT AT ANY TIME TO CHANGE OR DISCONTINUE ANY ASPECT OR FEATURE
+					OF THE WEBSITE, INCLUDING, BUT NOT LIMITED TO, CONTENT, HOURS OF AVAILABILITY AND EQUIPMENT NEEDED FOR
+					ACCESS OR USE. FURTHER, THE WEBSITE MAY DISCONTINUE DISSEMINATING
+					ANY PORTION OF INFORMATION OR CATEGORY OF INFORMATION.</li>
+				<li>THE COMPANY MAKE NO CLAIMS OR PROMISES ABOUT THE CONDUCT OF THIRD PARTIES. ACCORDINGLY, THE COMPANY
+					AND ITS RELATED PARTIES ARE NOT LIABLE TO YOU FOR ANY LOSS OR
+					DAMAGE THAT MIGHT ARISE FROM THEIR ACTIONS, INCLUDING, FOR EXAMPLE, IF ANOTHER USER MISUSES ‘YOUR
+					CONTENT’ OR IDENTITY, OR IF YOU HAVE A NEGATIVE EXPERIENCE WITH
+					YOUR EXPERIENCE IN DEALING WITH SUCH THIRD PARTIES. THE WEBSITE IS NOT RESPONSIBLE, AND MAKES NO
+					REPRESENTATIONS OR WARRANTIES FOR THE DELIVERY OF ANY MESSAGES
+					(SUCH AS MESSAGES, POSTING OF ANSWERS OR TRANSMISSION OF ANY OTHER USER GENERATED CONTENT) SENT THROUGH
+					THE WEBSITE TO ANYONE. IN ADDITION, THE WEBSITE DOES NOT
+					REPRESENT AND/OR WARRANT THAT YOUR USE OF THE SERVICE WILL NOT INFRINGE THE RIGHTS OF THIRD PARTIES. ANY
+					MATERIAL, SERVICE, OR TECHNOLOGY DESCRIBED OR USED ON THE
+					WEBSITE MAY BE SUBJECT TO INTELLECTUAL PROPERTY RIGHTS OWNED BY THIRD PARTIES WHO HAVE LICENSED TO US
+					SUCH MATERIAL, SERVICE, OR TECHNOLOGY.</li>
+				<li>THE COMPANY MAKES NO CLAIMS OR PROMISES ABOUT THE QUALITY, ACCURACY, OR RELIABILITY OF THE LISTINGS,
+					RATINGS, AND REVIEWS, OR THE SAFETY OR SECURITY OF THE SERVICE
+					OR ANY PRODUCT OR SERVICE THAT IS THE SUBJECT OF INFORMATION ON THE WEBSITE, OR CONTENT POSTED BY OTHER
+					USERS ON THE WEBSITE. ACCORDINGLY, THE COMPANY AND ITS RELATED
+					ENTITIES ARE NOT LIABLE TO YOU FOR ANY LOSS OR DAMAGE THAT MIGHT ARISE FROM YOUR RELIANCE ON THE
+					QUALITY, ACCURACY, OR RELIABILITY OF THE CONTENT INCLUDING USER CONTENT,
+					DESCRIPTIONS, STATEMENTS, RATINGS, OR REVIEWS, OR THE SAFETY OR SECURITY OF THE PRODUCTS AND/OR THE
+					SERVICES.</li>
+				<li>THE COMPANY, THROUGH THE WEBSITE, INTENDS TO PROVIDE ITS USERS WITH GENERAL INFORMATION ABOUT THE
+					PRODUCTS AND SERVICES SOLD ON THE WEBSITE. THE WEBSITE ENCOURAGES
+					YOU TO INTERACT WITH THE COMPANY, ITS EMPLOYEES AND USERS ON THE WEBSITE BY ASKING QUESTIONS THAT ENABLE
+					THE YOU TO OBTAIN INFORMATION OF A GENERAL NATURE PERTAINING
+					TO THE PRODUCTS. THE POSTINGS ON THE WEBSITE OR ON SOCIAL NETWORKING SITES, INCLUDING THE COMPANY’S
+					SOCIAL MEDIA PAGES, OR ANY INFORMATION PROVIDED OVER CHAT OR E-MAILS
+					EXCHANGED WITH THE COMPANY, ITS EMPLOYEES OR WEBSITE USERS (COLLECTIVELY REFERRED TO AS "INFORMATION")
+					WHICH ARE IN FURTHERANCE OF ANY COMMUNICATION MADE BY THE USER WITH
+					THE COMPANY, ITS EMPLOYEES OR WEBSITE USERS IS BASED ON THE BACKGROUND PROVIDED BY THE USER. WHILE THE
+					COMPANY TAKES REASONABLE CARE TO ENSURE THAT THE INFORMATION IS
+					ACCURATE, IT TAKES NO RESPONSIBILITY FOR THE ACCURACY, COMPLETENESS, APPROPRIATENESS OR USEFULNESS OF
+					THE INFORMATION. UNDER NO CIRCUMSTANCES WILL THE COMPANY,
+					ITS EMPLOYEES, REPRESENTATIVES AND/OR AFFILIATES BE LIABLE FOR SUCH INFORMATION OR THE CONSEQUENCES OF
+					RELYING ON SUCH INFORMATION.</li>
+
+				<li>SUBJECT TO APPLICABLE LAW, THE WEBSITE DOES NOT HAVE ANY OBLIGATION TO VERIFY THE IDENTITY OF THE
+					PERSONS SUBSCRIBING TO ITS SERVICES, NOR DOES IT HAVE ANY
+					OBLIGATION TO MONITOR THE USE OF ITS SERVICES BY OTHER USERS; THEREFORE, THE WEBSITE DECLINES ALL
+					LIABILITY FOR IDENTITY THEFT OR ANY OTHER MISUSE OF YOUR IDENTITY
+					OR INFORMATION.</li>
+
+				<li>FOR ANY GENERAL INFORMATION POSTED ON THE WEBSITE, YOU MUST NOT INFER OR ASSUME THAT SUCH INFORMATION
+					NECESSARILY APPLIES TO YOU.</li>
+
+				<li>YOUR SOLE AND EXCLUSIVE RIGHT AND REMEDY IN CASE OF DISSATISFACTION WITH THE WEBSITE OR ANY OTHER
+					GRIEVANCE SHALL BE YOUR TERMINATION AND DISCONTINUATION
+					OF ACCESS TO, AND USE OF THE WEBSITE.</li>
+
+				<li>THE COMPANY AND ITS RELATED ENTITIES’ MAXIMUM AGGREGATE LIABILITY TO YOU FOR LOSSES OR DAMAGES THAT
+					YOU SUFFER IN CONNECTION WITH THE WEBSITE AND/OR THESE TERMS
+					OF SERVICE IS LIMITED TO THE AMOUNT EARNED, IF ANY, FROM YOUR PURCHASES ON THE WEBSITE BY THE COMPANY IN
+					THE THREE (3) MONTHS PRIOR TO THE ACTION GIVING RISE TO THE
+					SAID LIABILITY.</li>
+
+				<li>THE COMPANY AND ITS RELATED ENTITIES DISCLAIM ANY AND ALL LIABILITY TO YOU FOR ANY (i) INDIRECT,
+					SPECIAL, INCIDENTAL, PUNITIVE, EXEMPLARY, OR CONSEQUENTIAL DAMAGES, (ii) LOSS OF PROFITS, (iii) BUSINESS
+					INTERRUPTION, (iv) LOSS OF OR DAMAGE TO REPUTATION, OR (v) LOSS OF INFORMATION OR DATA.</li>
+			</ol>
+		</div>
+
+		<button class="accordion">15. WEB SECURITY</button>
+		<div class="panel">
+			<p>You are prohibited from violating or attempting to violate the security of the Website, including,
+				without limitation, (a) accessing data not intended for you or logging
+				onto a server or an account which you are not authorized to access; (b) attempting to probe, scan or test
+				the vulnerability of a system or network or to breach security or
+				authentication measures without proper authorization; (c) attempting to interfere with the service to any
+				other user, host or network, including, without limitation,
+				via means of submitting a Virus to the Website, overloading, ‘flooding’, ‘spamming’, ‘mail bombing’ or
+				‘crashing’; (d) sending unsolicited email, including promotions
+				and/or advertising of products or services; or (e) forging any header or any part of the header
+				information in any email or newsgroup posting.</p>
+
+			<p>Any violations of system or network security may result in civil or criminal liability as per applicable
+				law. The Company is entitled to investigate occurrences that may involve
+				such violations and may involve, and cooperate with, law enforcement authorities in prosecuting users who
+				are involved in such violations. You agree not to use any device,
+				software or routine to interfere or attempt to interfere with the proper working of this Website or any
+				activity being conducted on this Website. You agree, further, not to
+				use or attempt to use any engine, software, tool, agent or other device or mechanism (including, without
+				limitation, browsers, spiders, robots, avatars or intelligent agents)
+				to navigate or search this Website other than the search engine and search agents available from the
+				Company on this Website and other than generally available third party web
+				browsers (e.g., Apple Safari, Google Chrome, Microsoft Explorer etc).</p>
+		</div>
+
+		<button class="accordion">16. SEVERABILITY, ENTIRE AGREEMENT</button>
+		<div class="panel">
+			<p>If any part of these Terms of Use is determined to be invalid or unenforceable pursuant to applicable law
+				including, but not limited to, the warranty disclaimers and liability
+				limitations set forth above, then such invalid or unenforceable provision will be deemed to be superseded
+				by a valid, enforceable provision that most closely matches the intent of
+				the original provision and the remainder of the Terms of Use shall continue to be in effect. Unless
+				otherwise specified herein, these Terms of Use constitutes the entire agreement
+				between you and the Company with respect to your use of the Website and it supersedes all prior or
+				contemporaneous communications and proposals, whether electronic,
+				oral or written. The Company’s failure to act with respect to a breach by you or others does not waive its
+				right to act with respect to the breach or subsequent and
+				similar breaches.</p>
+		</div>
+
+		<button class="accordion">17. ENFORCEMENT COSTS</button>
+		<div class="panel">
+			<p>In the event any disputes arise out of these Terms and Conditions, including but not limited to
+				litigation, mediation, arbitration or those otherwise involving legal counsel,
+				the prevailing party will be entitled to recover reasonable legal fees, expenses and court costs through
+				appeal and final judgment on all issues in addition to any other relief
+				to which the party may be entitled. In no event will you continue litigation for the sole purpose of
+				recovering enforcement costs, unless the enforcement costs exceed written
+				settlement offers or orders at the time that each offer is made or order is entered.</p>
+		</div>
+
+		<button class="accordion">18. HEADINGS</button>
+		<div class="panel">
+			<p>Headings are included in these Terms and Conditions for convenience only, not to give any greater weight
+				or significance to, or otherwise limit or affect,
+				the meaning of any word, phrase, sentence, paragraph or other clause in these Terms and Conditions. Unless
+				otherwise expressed herein, <b>bolded</b>, italicized or <u>underlined</u> letters,
+				numerals, or characters have no greater significance than plain text letters, numerals, or characters.</p>
+		</div>
+
+		<button class="accordion">19. NOTICES</button>
+		<div class="panel">
+			<p>The Website may notify You via postings on the Website, and via email or any other means of communication
+				you provide in your contact information on the Website.
+				You may notify the Website via email at <a href="mailto:info@onesevenhome.com" class="ng-binding">info@onesevenhome.com</a> or by mail/courier to OSH Heights Private Limited,
+				Attn: _____________ , OSH Heights Private Limited, H. No. 22-4/A,
+				Eenadu Colony, Kukatpally, Hyderabad – 500072, Telangana, India; provided that any notices that you
+				provide without compliance with this Clause on Notices shall have no legal effect.</p>
+		</div>
+	</div>
+</div>
+</div>

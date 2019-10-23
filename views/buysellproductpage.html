@@ -1,0 +1,269 @@
+<div class="wrap">
+
+	<section class="top" id="top-header">
+      <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 shipping-text"> Free Shipping on Orders <i class="fa fa-rupee"></i> 5000 and Above </div>
+            <div class="col-xs-12 col-sm-6 links">
+               <a href="#contact" class="right-links">Contact Us</a> <span ng-hide="userlogged"><a href="#/login" class="right-links">Login </a>  <a href="#/registration" > Signup</a></span><span class="login-btn" ng-show="userlogged">{{loggedInUserName}}</span>
+               <!--=== LOGOUT SECTION ===-->
+               <div class="myprofile-block">
+                  <div class="mypro-brdr">
+                     <div class="pro-top">
+                        <!--<a href="#" class="pro-pic">
+                           <img src="img/tst-pic.jpg"/>
+                           <span>Change</span>
+                           </a>-->
+                        <div class="pro-txt">
+                           <h3>{{loggedInUserName}}</h3>
+                           <h4>{{loggedInUser}}</h4>
+                        </div>
+                     </div>
+                     <div class="pro-btm">
+                        <span class="mypro-btn" ng-click="myProfile()"><a>My profile</a></span>
+                        <span class="mypro-logout" ng-click="logout()"><a>Log Out</a></span>
+                     </div>
+                  </div>
+               </div>
+               <a href="#cart" class="cart">
+                  <!--<i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> -->
+                  <img src="img/cart1.png">
+                  <span class="cart-value"> {{lengthofcart}}</span> 
+               </a>
+            </div>
+         </div>
+      </div>
+	
+   </section>
+   <header class="header">
+     <header-Directive></header-Directive>
+      <!-- <category-Directive></category-Directive> -->
+   </header>
+<div id="buy-sell-plistview">
+<div class="container">
+<section class="title">
+      <div class="row">
+         <section class="todaydeals title">
+	 <div class="col-xs-12 ">
+               <h2 class="sec-title"><strong>Hot Deals - Save upto 50%</strong></h2>
+               <p class="sub-tag">Great Savings. Every Day. Shop from our Deal of the Day, Lightning Deals and avail other great 
+                  offers. <a href="#registration">Sign up</a> for deal notifications
+               </p>
+           
+            </div></section>
+      </div>
+ <div class="bs-content plistview">
+<div class="left">
+<span>
+<label>Filters</label>
+<input type="text" placeholder="Key Word">
+</span>
+</div>
+
+<div class="right">
+<span class="select-city">
+<input type="text" class="select-city" placeholder="Select City">
+</span>
+<span class="location">
+<input type="text" placeholder="Location">
+</span>
+<span class="min-price">
+<input type="text" placeholder="Min Price">
+</span>
+<span class="min-price">
+<input type="text" placeholder="Max Price">
+</span>
+
+<span>
+<div class="bs-sec-block">
+<button type="button" value="Search">SEARCH</button>
+</div>
+</span>
+</div>
+
+</div><!-- .bs-content.reg -->
+</section>
+
+<div class="buysell-block plistview">
+<div class="breadcrumbs">
+<a href="#/">Home</a> &gt; Login or Create Account</div>
+</div><!-- .buysell-block.reg end -->
+<section class="buylist">
+		<div class="bs-links">
+	<div class="left">
+	<p class="s-result">Showing all <b>6</b> results</p>
+	</div>
+	
+	</div>
+</section>
+</div><!-- .container -->
+
+</div>
+
+<div class="card prd-detail">
+<div class="container">
+ <div class="row">
+<div class="col-sm-5 border-right">
+<div class="detail-wrap"> 
+<div class="img-big-wrap">
+  <div class="zoom" id="screen1"> <a href="#"><img id="item-display" src="{{buysellproductproduct.imgurl1}}" alt="Product Image"></a></div>
+  <div class="zoom" id="screen2"> <a href="#"><img id="item-display" src="{{buysellproductproduct.timgurl2}}" alt="Product Image"></a></div>
+  <div class="zoom" id="screen3"> <a href="#"><img id="item-display" src="{{buysellproductproduct.timgurl3}}" alt="Product Image"></a></div>
+  <div class="zoom" id="screen4"> <a href="#"><img id="item-display" src="{{buysellproductproduct.timgurl4}}" alt="Product Image"></a></div>
+</div> <!-- slider-product.// -->
+<div class="img-small-wrap">
+  <div class="item-gallery" id="img-1"> <img id="item-display" src="{{buysellproductproduct.timgurl1}}" alt="Product Image"> </div>
+  <div class="item-gallery" id="img-2"> <img id="item-display" src="{{buysellproductproduct.timgurl2}}" alt="Product Image"> </div>
+  <div class="item-gallery" id="img-3"> <img id="item-display" src="{{buysellproductproduct.timgurl3}}" alt="Product Image"> </div>
+  <div class="item-gallery" id="img-4"> <img id="item-display" src="{{buysellproductproduct.timgurl4}}" alt="Product Image"> </div>
+</div> 
+<div class="prd-social_icons pull-left">
+<ul>
+    <p>Share and like</p>
+	<li><a href=""><i class="fa fa-facebook"></i></a></li>
+	   <li><a href=""><i class="fa fa-twitter"></i></a></li>
+	   <li><a href=""><i class="fa fa-envelope"></i></a></li>
+	     <li><a href=""><i class="fa fa-instagram"></i></a></li>
+    <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+	</ul>
+</div>
+<div class="prd-social_icons pull-right">
+<ul>
+    <li><a href=""><i class="fa fa-eye"></i>Views:1222</a></li>
+</ul>
+</div>
+</div> 
+</div>
+<div class="col-sm-7">
+<section class="card-body p-5">
+<div class="prd_title">
+<h3 class="pull-left title mb-3">{{buysellproductproduct.title}}</h3>
+<span class="save pull-right">
+<i class="fa">&#xf08a;</i> 
+<p>Save</p>
+
+</div>
+<p class="price-detail-wrap"> 
+<div class="rating">
+   <span class="stars">
+    <span ng-style="{ 'width': getStars(rating.number) }" style="width: 0%;"></span>
+      </span>
+ <p class="ng-binding">0/5 (0 Reviews)</p>
+  </div>
+ <div class="price ng-binding">
+	    <i class="fa fa-inr" aria-hidden="true"></i>14,999.00
+	 </div>
+	 
+ </p> <!-- price-detail-wrap .// -->
+
+<div class="col-sm-5">
+<div class="param param-inline">
+<div>
+	<select class="form-control form-control-sm" style="width:70px;">
+			  		<option> 1 </option>
+			  		<option> 2 </option>
+			  		<option> 3 </option>
+			  	</select>
+				<p>Posted 2 weeks ago</p>
+			  </div>
+	</div>  <!-- item-property .// -->
+	</div> <!-- col.// -->
+ </section> 
+	
+<div class="prd-offer">
+ <a href=""><span>MAKE AN OFFER</span></a>
+ </div>
+ <div class="prd-info">
+ <a href=""><span>SELLER INFORMATION</span></a>
+ <div class="s_in_hover">
+<ul class="s_info pull-left">
+<li>Name: Suzann Wilkie </li>
+<li>Contact No: 9966033317</li> 
+<li>Email: susann@gmail.com</li>
+<li>Web: www.susane.com </li>
+<li>Location: Hyderabad</li> 
+<li>Country: India</li>
+</ul>
+</div>
+ </div>
+ <div class="prd_navtabs">
+ <ul class="nav nav-tabs">
+    <li id="des_tab" class="active"><a data-toggle="tab" href="">Description</a></li>
+    <li id="msg_tab"><a data-toggle="tab" href="">Message</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Description" class="tab-pane fade in active">
+      <h3>Description</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="Message" class="tab-pane fade">
+      <h3>Message</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+   
+ </div>
+</div>
+
+  </div> 
+ </div> 
+ </div> 
+</div>
+
+
+
+		  
+</div>
+
+<script>
+$("#des_tab").click(function(){
+    $("#Description").show();
+	$("#Message").hide();
+    $("#des_tab").addClass("active");
+    $("#Description").addClass("in");
+    $("#msg_tab").removeClass("active");
+    $("#Message").removeClass("in");
+});
+
+$("#msg_tab").click(function(){
+    $("#Message").show();
+    $("#Description").hide();
+	$("#msg_tab").addClass("active");
+	$("#Message").addClass("in");
+	$("#des_tab").removeClass("active");
+	$("#Description").removeClass("in");
+});
+
+</script>
+<script>
+   jQuery(".popup .qtn").click(function(){
+   	jQuery(".popuptext").toggle();
+   });
+   $(".login-btn").click(function(){
+   	$(".myprofile-block").toggle();
+   });
+   jQuery("#img-1").click(function(){
+   	jQuery("#screen1").show();
+   	jQuery("#screen2").hide();
+   	jQuery("#screen3").hide();
+   	jQuery("#screen4").hide();
+   });
+   jQuery("#img-2").click(function(){
+	jQuery("#screen1").hide();
+   	jQuery("#screen2").show();
+   	jQuery("#screen3").hide();
+   	jQuery("#screen4").hide();
+   });
+   jQuery("#img-3").click(function(){
+   	jQuery("#screen1").hide();
+   	jQuery("#screen2").hide();
+	jQuery("#screen3").show();
+   	jQuery("#screen4").hide();
+   });
+   jQuery("#img-4").click(function(){
+   	jQuery("#screen1").hide();
+   	jQuery("#screen2").hide();
+   	jQuery("#screen3").hide();
+	jQuery("#screen4").show();
+   	});
+	</script>

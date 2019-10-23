@@ -1,0 +1,56 @@
+<nav class="navbar navbar-default">
+   <div class="container">
+      <div class="row">
+         <div class="col-xs-12 ">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span
+                     class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+               <a class="navbar-brand" href="#/"></a>
+               <figure> </figure>
+               <div class="search mobile-search">
+                  <div class="input">
+                     <i class="fa fa-search"></i>
+                     <input type="text" placeholder="Search">
+                  </div>
+               </div>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+               <ul class="nav navbar-nav">
+                  <li><a href="#/todaydeals">Today's Deals</a></li>
+                  <li><a href="#/buysell">Buy/Sell</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#/aboutus">About Us</a></li>
+                  <!-- <li class="store"><a>Our Store</a></li> -->
+                  <li><a href="#/myaccount">My Account</a></li>
+                  <li class="menu-search">
+                     <div class="search">
+                        <div class="input">
+                           <i class="fa fa-search"></i>
+                           <div class="menu-in" ng-controller="TypeSearchCtrl">
+                              <div class="sec-block">
+                                 <select ng-init="searchType = typeOfSearch[0]" ng-model="searchType" ng-options="option.name for option in typeOfSearch">
+                                 </select>
+                              </div>
+                              <input type="text" id="modalValue" ng-keypress="searchFunctions(searchSelected,$event,searchType.value,$model)"
+                                 value="searchSelected" ng-model="searchSelected" autofocus="autofocus" placeholder="Search"
+                                 uib-typeahead="item for item in getSearch($viewValue, searchType.value)"
+                                 typeahead-focus-first="false" typeahead-wait-ms="1000" typeahead-min-length="3"
+                                 typeahead-on-select="onSearchSelect(searchSelected, $item, $model, $label, $event, searchType.value, titleArray)"
+                                 typeahead-no-results="noResults" />
+                              <span class="menu-in-search" ng-click="searchFunction(searchSelected, searchType.value)"><i
+                                    class="fa fa-search"></i></span>
+                              <span class="menu-in-clear" ng-click="clearString(searchSelected)"><i class="fa fa-times-circle"></i></span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="post"><a href="#postrequire"><span>Post A Requirement</span></a></li>
+               </ul>
+            </div>
+            <!--.nav-collapse -->
+         </div>
+      </div>
+   </div>
+   <!--/.container-fluid -->
+</nav>

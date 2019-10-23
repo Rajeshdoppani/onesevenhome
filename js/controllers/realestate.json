@@ -1,0 +1,57 @@
+ [
+	{
+	     "id":25,
+		"title": " Dream-Avenue ",
+		"price": 0,
+       "imgurl1": "img/RealEstate/Dream-Avenue/dream-avenue-1.jpg"
+	    
+
+
+	},
+	{
+	     "id":26,
+		"title": " Keerthi-Richmond",
+		"price": 0,
+       "imgurl1": "/img/RealEstate/KEERTHI-RICHMOND/KEERTHI-RICHMOND-1.jpg"
+	    
+
+
+	},
+	
+	{
+	     "id":27,
+		"title": "Kenworth-1",
+		"price": 0,
+       "imgurl1": "img/RealEstate/Kenworth-1/Kenworth-1.jpg"
+	    
+
+
+	},
+	{
+	     "id":28,
+		"title": "Silpa-Hilltop",
+		"price": 0,
+       "imgurl1": "img/RealEstate/SILPA-HILLTOP/SILPA-HILLTOP1.jpg"
+	    
+
+
+	},
+	{
+	     "id":29,
+		"title": "spandana",
+		"price": 0,
+       "imgurl1": "img/RealEstate/SPANDANA/SPANDANA-1.jpg"
+
+
+	},
+	{
+	     "id":30,
+		"title": "SVS_Infra",
+		"price": 0,
+       "imgurl1": "img/RealEstate/SVS_Infra/SVSInfra-1.jpg"
+	    
+
+
+	}
+	
+	]

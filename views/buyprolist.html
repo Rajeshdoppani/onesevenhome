@@ -1,0 +1,170 @@
+<div class="wrap">
+	<section class="top" id="top-header">
+     <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 shipping-text"> Free Shipping on Orders <i class="fa fa-rupee"></i> 5000 and Above </div>
+            <div class="col-xs-12 col-sm-6 links">
+               <a href="#contact" class="right-links">Contact Us</a> <span ng-hide="userlogged"><a href="#/login" class="right-links">Login </a>  <a href="#/registration" > Signup</a></span><span class="login-btn" ng-show="userlogged">{{loggedInUserName}}</span>
+               <!--=== LOGOUT SECTION ===-->
+               <div class="myprofile-block">
+                  <div class="mypro-brdr">
+                     <div class="pro-top">
+                        <!--<a href="#" class="pro-pic">
+                           <img src="img/tst-pic.jpg"/>
+                           <span>Change</span>
+                           </a>-->
+                        <div class="pro-txt">
+                           <h3>{{loggedInUserName}}</h3>
+                           <h4>{{loggedInUser}}</h4>
+                        </div>
+                     </div>
+                     <div class="pro-btm">
+                        <span class="mypro-btn" ng-click="myProfile()"><a>My profile</a></span>
+                        <span class="mypro-logout" ng-click="logout()"><a>Log Out</a></span>
+                     </div>
+                  </div>
+               </div>
+               <a href="#cart" class="cart">
+                  <!--<i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> -->
+                  <img src="img/cart1.png">
+                  <span class="cart-value"> {{lengthofcart}}</span> 
+               </a>
+            </div>
+         </div>
+      </div>
+	
+   </section>
+   <header class="header">
+     <header-Directive></header-Directive>
+      <category-Directive></category-Directive>
+   </header>
+<div id="buy-sell-plistview">
+<div class="container">
+<section class="title">
+      <div class="row">
+         <section class="todaydeals title">
+	 <div class="col-xs-12 ">
+               <h2 class="sec-title"><strong>Hot Deals - Save upto 50%</strong></h2>
+               <p class="sub-tag">Great Savings. Every Day. Shop from our Deal of the Day, Lightning Deals and avail other great 
+                  offers. <a href="#registration">Sign up</a> for deal notifications
+               </p>
+           
+            </div></section>
+      </div>
+ <div class="bs-content plistview">
+<div class="left">
+<span>
+<label>Filters</label>
+<input type="text" placeholder="Key Word">
+</span>
+</div>
+
+<div class="right">
+<span class="select-city">
+<input type="text" class="select-city" placeholder="Select City">
+</span>
+<span class="location">
+<input type="text" placeholder="Location">
+</span>
+<span class="min-price">
+<input type="text" placeholder="Min Price">
+</span>
+<span class="min-price">
+<input type="text" placeholder="Max Price">
+</span>
+
+<span>
+<div class="bs-sec-block">
+<button type="button" value="Search">SEARCH</button>
+</div>
+</span>
+</div>
+
+</div><!-- .bs-content.reg -->
+</section>
+
+<div class="buysell-block plistview">
+<div class="breadcrumbs">
+<a href="#/">Home</a> &gt; Login or Create Account</div>
+</div><!-- .buysell-block.reg end -->
+<section class="buylist">
+		<div class="bs-links">
+	<div class="left">
+	<p class="s-result">Showing all <b>6</b> results</p>
+	</div>
+	<div class="right">
+	<span>
+	<label>View</label>
+	<i id="grid_vw" class="fa fa-th active" aria-hidden="true"></i>
+	<i id="list_vw" class="fa fa-th-list" aria-hidden="true"></i>
+	</span>
+	<span>
+	<label>Sort By:</label>
+	<div class="sec-block">
+	<select>
+		<option>Newly Listings</option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+	</select>
+	</div>
+	</span>
+	</div>
+	</div>
+</section>
+</div><!-- .container -->
+
+</div>
+
+<div class="bs-btm" id="progridview">
+<div class="todaydeals">
+<div class="pro-gridview col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3" ng-repeat="x in furnitureproduct">
+		<div class="t-pro">
+		<figure><a href="#/buysellproductpage/{{x.id}}"><img src="{{x.imgurl1}}"></a></figure>
+		<h3>{{x.title}}</h3>
+		<h4><i aria-hidden="true" class="fa fa-inr"></i> {{x.price}}</h4>
+		<a class="va" href="#/buysellproductpage/{{x.id}}">View Details</a>
+		</div>
+	</div>
+
+</div>
+</div>
+</div><!-- bs-btm -->
+
+<div id="prolistview">
+	
+	<div class="list-view col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-repeat="x in furnitureproduct">
+	<div class="t-pro">
+		<figure><a href="#/buysellproductpage/{{x.id}}"><img src="{{x.imgurl1}}"></a></figure>
+		<div class="t-pro-right">
+		<h3>{{x.title}}</h3>
+		<h4><i aria-hidden="true" class="fa fa-inr"></i> {{x.price}}</h4>
+		<a class="va" href="#/buysellproductpage/{{x.id}}">View Details</a>
+		</div>
+	</div>
+	</div>
+
+</div>
+
+		  
+</div>
+
+<script>
+$("#grid_vw").click(function(){
+    $("#progridview").show();
+	$("#prolistview").hide();
+    $("#grid_vw").addClass("active");
+    $("#list_vw").removeClass("active");
+});
+
+$("#list_vw").click(function(){
+    $("#prolistview").show();
+    $("#progridview").hide();
+	$("#list_vw").addClass("active");
+	$("#grid_vw").removeClass("active");
+});
+
+</script>
+

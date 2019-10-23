@@ -1,0 +1,293 @@
+<div class="wrap">
+   <section class="top" id="top-header">
+      <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 shipping-text"> Free Shipping on Orders <i class="fa fa-rupee"></i> 5000 and
+               Above </div>
+            <div class="col-xs-12 col-sm-6 links">
+               <a href="#contact" class="right-links">Contact Us</a> <span ng-hide="userlogged"><a href="#/login"
+                  class="right-links">Login </a> <a href="#/registration"> Signup</a></span><span class="login-btn"
+               ng-show="userlogged">{{loggedInUserName}}</span>
+               <!--=== LOGOUT SECTION ===-->
+               <div class="myprofile-block">
+                  <div class="mypro-brdr">
+                     <div class="pro-top">
+                        <!--<a href="#" class="pro-pic">
+                           <img src="img/tst-pic.jpg"/>
+                           <span>Change</span>
+                           </a>-->
+                        <div class="pro-txt">
+                           <h3>{{loggedInUserName}}</h3>
+                           <h4>{{loggedInUser}}</h4>
+                        </div>
+                     </div>
+                     <div class="pro-btm">
+                        <span class="mypro-btn" ng-click="myProfile()"><a>My profile</a></span>
+                        <span class="mypro-logout" ng-click="logout()"><a>Log Out</a></span>
+                     </div>
+                  </div>
+               </div>
+               <a href="#cart" class="cart">
+                  <!--<i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> -->
+                  <img src="img/cart1.png">
+                  <span class="cart-value"> {{lengthofcart}}</span>
+               </a>
+            </div>
+         </div>
+      </div>
+
+   </section>
+   <header class="header">
+      <header-Directive></header-Directive>
+      <!-- <category-Directive></category-Directive> -->
+   </header>
+
+   <div id="buy-sell">
+      <div class="container">
+         <div class="row">
+
+            <div class="buysell-block">
+               <div class="buy-slide">
+                  <!-- bs-banner start -->
+                  <div class="bs-banner">
+                     <figure>
+                        <img src="img/buy-sell/buy-banner1.jpg" />
+                     </figure>
+                     <figcaption>Buy/Sell</figcaption>
+                  </div>
+                  <div class="bs-banner">
+                     <figure>
+                        <img src="img/buy-sell/buy-banner2.jpg" />
+                     </figure>
+                     <figcaption>Buy/Sell</figcaption>
+                  </div>
+                  <div class="bs-banner">
+                     <figure>
+                        <img src="img/buy-sell/buy-banner3.jpg" />
+                     </figure>
+                     <figcaption>Buy/Sell</figcaption>
+                  </div>
+                  <div class="bs-banner">
+                     <figure>
+                        <img src="img/buy-sell/buy-banner4.jpg" />
+                     </figure>
+                     <figcaption>Buy/Sell</figcaption>
+                  </div>
+                  <div class="bs-banner">
+                     <figure>
+                        <img src="img/buy-sell/buy-banner5.jpg" />
+                     </figure>
+                     <figcaption>Buy/Sell</figcaption>
+                  </div>
+                  <!-- bs-banner end -->
+
+               </div>
+
+               <div class="buysell-content">
+
+                  <div class="bs-links">
+
+                     <h3>Select a Category</h3>
+                     <div class="right">
+                        <span>
+                           <label>Search</label>
+                           <input type="text" placeholder="Search" />
+                        </span>
+                        <span>
+                           <label>Location</label>
+                           <div class="sec-block">
+                              <select>
+                                 <option>Location</option>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                              </select>
+                           </div>
+                        </span>
+                     </div>
+
+                  </div><!-- bs-links -->
+                  <!--  -->
+                  <div class="bs-top">
+                     <div class="bs-block" ng-repeat="x in buysellcat">
+                        <figure class="bs-main">
+                           <a href="#/buyprolist/{{x.id}}">
+                              <img src="{{x.imgurl1}}" />
+                           </a>
+                        </figure>
+                        <figure class="bs-hover">
+                           <a href="#/buyprolist/{{x.id}}">
+                              <img src="{{x.imgurl2}}" />
+                           </a>
+                        </figure>
+                        <figcaption><a href="#/buyprolist/{{x.id}}">{{x.title}}</a></figcaption>
+                     </div>
+                  </div>
+
+                  <div class="bs-btm">
+                     <div class="todaydeals">
+                        <h2>Latest Listings</h2>
+                        <div class="bs-btm-slide">
+                           <div class="bs-btm-slide-blck">
+                              <div class="t-pro">
+                                 <figure>
+                                    <a href=""><img src="img/buy-sell/bs-btm1.jpg"></a>
+                                 </figure>
+                                 <h3>Havells 5W Standard LED Bulb</h3>
+                                 <h4><i aria-hidden="true" class="fa fa-inr"></i> 0</h4>
+                                 <a class="va" href="">View Details</a>
+                              </div>
+                           </div>
+                           <div class="bs-btm-slide-blck">
+                              <div class="t-pro">
+                                 <figure>
+                                    <a href=""><img src="img/buy-sell/bs-btm2.jpg"></a>
+                                 </figure>
+                                 <h3>Cast Iron Pipes</h3>
+                                 <h4><i aria-hidden="true" class="fa fa-inr"></i> 0</h4>
+                                 <p><a class="va" href="">View Details</a></p>
+                              </div>
+                           </div>
+                           <div class="bs-btm-slide-blck">
+                              <div class="t-pro">
+                                 <figure>
+                                    <a href=""><img src="img/buy-sell/bs-btm3.jpg"></a>
+                                 </figure>
+                                 <h3>Half base Washbasin</h3>
+                                 <h4><i aria-hidden="true" class="fa fa-inr"></i> 0</h4>
+                                 <p><a class="va" href="">View Details</a></p>
+                              </div>
+                           </div>
+                           <div class="bs-btm-slide-blck">
+                              <div class="t-pro">
+                                 <figure>
+                                    <a href=""><img src="img/buy-sell/bs-btm4.jpg"></a>
+                                 </figure>
+                                 <h3>Phinoloex 25Meter Electric Wire</h3>
+                                 <h4><i aria-hidden="true" class="fa fa-inr"></i> 0</h4>
+                                 <p><a class="va" href="">View Details</a></p>
+                              </div>
+                           </div>
+                           <div class="bs-btm-slide-blck">
+                              <div class="t-pro">
+                                 <figure>
+                                    <a href=""><img src="img/buy-sell/bs-btm5.jpg"></a>
+                                 </figure>
+                                 <h3>Havells 5W Standard LED Bulb</h3>
+                                 <h4><i aria-hidden="true" class="fa fa-inr"></i> 0</h4>
+                                 <a class="va" href="">View Details</a>
+                              </div>
+                           </div>
+                           <div class="bs-btm-slide-blck">
+                              <div class="t-pro">
+                                 <figure>
+                                    <a href=""><img src="img/buy-sell/bs-btm6.jpg"></a>
+                                 </figure>
+                                 <h3>Cast Iron Pipes</h3>
+                                 <h4><i aria-hidden="true" class="fa fa-inr"></i> 0</h4>
+                                 <p><a class="va" href="">View Details</a></p>
+                              </div>
+                           </div>
+                           <div class="bs-btm-slide-blck">
+                              <div class="t-pro">
+                                 <figure>
+                                    <a href=""><img src="img/buy-sell/bs-btm7.jpg"></a>
+                                 </figure>
+                                 <h3>Half base Washbasin</h3>
+                                 <h4><i aria-hidden="true" class="fa fa-inr"></i> 0</h4>
+                                 <p><a class="va" href="">View Details</a></p>
+                              </div>
+                           </div>
+                           <div class="bs-btm-slide-blck">
+                              <div class="t-pro">
+                                 <figure>
+                                    <a href=""><img src="img/buy-sell/bs-btm8.jpg"></a>
+                                 </figure>
+                                 <h3>Phinoloex 25Meter Electric Wire</h3>
+                                 <h4><i aria-hidden="true" class="fa fa-inr"></i> 0</h4>
+                                 <p><a class="va" href="">View Details</a></p>
+                              </div>
+                           </div>
+                           <div class="bs-btm-slide-blck">
+                              <div class="t-pro">
+                                 <figure>
+                                    <a href=""><img src="img/buy-sell/bs-btm7.jpg"></a>
+                                 </figure>
+                                 <h3>Half base Washbasin</h3>
+                                 <h4><i aria-hidden="true" class="fa fa-inr"></i> 0</h4>
+                                 <p><a class="va" href="">View Details</a></p>
+                              </div>
+                           </div>
+                           <div class="bs-btm-slide-blck">
+                              <div class="t-pro">
+                                 <figure>
+                                    <a href=""><img src="img/buy-sell/bs-btm8.jpg"></a>
+                                 </figure>
+                                 <h3>Phinoloex 25Meter Electric Wire</h3>
+                                 <h4><i aria-hidden="true" class="fa fa-inr"></i> 0</h4>
+                                 <p><a class="va" href="">View Details</a></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div><!-- bs-btm -->
+               </div><!-- buysell-content end -->
+            </div><!-- buysell-block end -->
+         </div>
+      </div>
+   </div><!-- #buy-sell -->
+
+   <div id="back-top">
+      <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-circle-o-up"></i></a>
+   </div>
+</div>
+
+<script>
+   $('.buy-slide').slick({
+      dots: true,
+      fade: true,
+      arrows: false,
+      infinite: true,
+      speed: 300,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      slidesToScroll: 1
+   });
+
+   $('.bs-btm-slide').slick({
+      dots: false,
+      arrows: true,
+      infinite: true,
+      speed: 500,
+      autoplaySpeed: 10000,
+      autoplay: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      rows: 1,
+      responsive: [
+         {
+            breakpoint: 1024,
+            settings: {
+               slidesToShow: 4,
+               slidesToScroll: 1
+            }
+         },
+         {
+            breakpoint: 767,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1
+            }
+         },
+         {
+            breakpoint: 450,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         }
+      ]
+   });
+</script>
